@@ -4,7 +4,7 @@
   <title><![CDATA[FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-15T00:25:44+10:00</updated>
+  <updated>2015-04-15T00:29:43+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -12,20 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://www.farshidesigns.com/blog/2015/04/15/hello-world/"/>
-    <updated>2015-04-15T00:24:45+10:00</updated>
-    <id>http://www.farshidesigns.com/blog/2015/04/15/hello-world</id>
-    <content type="html"><![CDATA[<p>Hello Wolrd!</p>
-
-<blockquote><p>Do it!Do it hust.</p><footer><strong>Reza</strong></footer></blockquote>
-
-
-<p></p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Finally I Decided to Blog]]></title>
