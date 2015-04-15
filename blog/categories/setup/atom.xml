@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Setup | FARSHI DESIGNS]]></title>
+  <link href="http://www.farshidesigns.com/blog/categories/setup/atom.xml" rel="self"/>
+  <link href="http://www.farshidesigns.com/"/>
+  <updated>2015-04-15T23:58:49+10:00</updated>
+  <id>http://www.farshidesigns.com/</id>
+  <author>
+    <name><![CDATA[Reza Farshi]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[An Installation Tips - Octopress Over GitHubPages.]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/15/an-installation-tips-octopress-over-githubpages/"/>
+    <updated>2015-04-15T13:43:48+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/15/an-installation-tips-octopress-over-githubpages</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve recently setup my weblog  using Octopress weblog framework over githubpages. I noticed some delicate hints should be applied when setting up Octopress over GitHubPages. When you are trying to install the Octopress weblog framework over your GitHubPages, according to the Octopress installation guide you should fist login into your GitHub account and create a repository and  name the repository with the format username.github.io, where username is your GitHub user name or organization name. now some tips to prevent getting errors like this:</p>
+
+<pre><code class="">c## Pushing generated _deploy website
+To git@github.com:farshi/farshi.github.io.git
+ ! [rejected]        master -&gt; master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:farshi/farshi.github.io.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. 'git pull') before pushing again.  See the
+'Note about fast-forwards' section of 'git push --help' for details.
+</code></pre>
+
+<p>Tip 1: In the page of creating the repository  you should not select &lsquo;Initialize this repository with a README&rsquo;. Unless when you hit rake deploy command you will get this error.</p>
+
+<p>Tip 2: After creating repository you should specify your repository to octopress by hitting this command &lsquo;rake setup&hellip; &rsquo; , when you asked to enter the URI for your repository , stick to the https URL instead of git@ URI.</p>
+
+<p>I hope it helps you to have a smooth Octopress setup.</p>
+]]></content>
+  </entry>
+  
+</feed>
