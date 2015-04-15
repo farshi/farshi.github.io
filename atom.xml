@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[FARSHI DESIGNS]]></title>
+  <link href="http://www.farshidesigns.com/atom.xml" rel="self"/>
+  <link href="http://www.farshidesigns.com/"/>
+  <updated>2015-04-15T14:21:52+10:00</updated>
+  <id>http://www.farshidesigns.com/</id>
+  <author>
+    <name><![CDATA[Reza Farshi]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[An Installation Tips - Octopress Over GitHubPages.]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/15/an-installation-tips-octopress-over-githubpages/"/>
+    <updated>2015-04-15T13:43:48+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/15/an-installation-tips-octopress-over-githubpages</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve recently setup my weblog and I&rsquo;ve usedOctopress weblog framework. I noticed some delicate hints should be applied when setting up Octopress over GitHubPages. When you are trying to install the Octopress weblog framework over your GitHubPages, according to the Octopress installation guide you should fist login into your GitHub account and create a repository and  name the repository with the format username.github.io, where username is your GitHub user name or organization name. now some tips to prevent getting errors like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>c## Pushing generated _deploy website
+</span><span class='line'>To git@github.com:farshi/farshi.github.io.git
+</span><span class='line'> ! [rejected]        master -&gt; master (non-fast-forward)
+</span><span class='line'>error: failed to push some refs to 'git@github.com:farshi/farshi.github.io.git'
+</span><span class='line'>To prevent you from losing history, non-fast-forward updates were rejected
+</span><span class='line'>Merge the remote changes (e.g. 'git pull') before pushing again.  See the
+</span><span class='line'>'Note about fast-forwards' section of 'git push --help' for details.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Tip 1:</p>
+
+<p>In the page of creating the repository  you should not select &lsquo;Initialize this repository with a README&rsquo;. Unless when you hit rake deploy command you will get this error.</p>
+
+<p>Tip 2:</p>
+
+<p>after creating repository you should specify your repository to octopress by hitting this command &lsquo;rake setup&hellip; &rsquo; , when you asked to enter the URI for your repository , stick to the https URL instead of git@ URI.</p>
+
+<p>I hope it helps you to have a smooth Octopress setup.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Finally I Decided to Blog]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/14/finally-i-decided-to-blog/"/>
+    <updated>2015-04-14T01:45:43+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/14/finally-i-decided-to-blog</id>
+    <content type="html"><![CDATA[<p>Every time I was reading some professional hackers blogs, I thought to myself how good it would be if I had my own weblog and  streamed my thoughts through it.</p>
+
+<p>Today I&rsquo;m so happy and proud of myself coz finally I decided to create my own weblog. I believe in this:</p>
+
+<blockquote><p>Do the difficult things while they are easy and do the great things while they are small. A journey of a thousand miles must begin with a single step.</p><footer><strong>Lao Tzu</strong></footer></blockquote>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+</feed>
