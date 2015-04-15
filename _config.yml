@@ -7,7 +7,7 @@ title: FARSHI DESIGNS
 subtitle: My thoughts toward software architecture.
 author: Reza Farshi 
 simple_search: https://www.google.com/search
-description:
+description: This weblog tries to discuss about new technologies regarding software design and applicaton architecture.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -95,7 +95,7 @@ disqus_short_name: farshidesigns
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-61874438-1
 
 # Facebook Like
 facebook_like: false
