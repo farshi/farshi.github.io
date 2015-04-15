@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Dd | FARSHI DESIGNS]]></title>
-  <link href="http://farshi.github.io/blog/categories/dd/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Deploy | FARSHI DESIGNS]]></title>
+  <link href="http://farshi.github.io/blog/categories/deploy/atom.xml" rel="self"/>
   <link href="http://farshi.github.io/"/>
-  <updated>2015-04-15T15:09:09+10:00</updated>
+  <updated>2015-04-15T15:13:01+10:00</updated>
   <id>http://farshi.github.io/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>

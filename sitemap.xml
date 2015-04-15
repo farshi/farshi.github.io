@@ -15,6 +15,21 @@
     <loc>http://farshi.github.io/</loc>
   </url>
   <url>
-    <loc>http://farshi.github.io/blog/categories/dd/</loc>
+    <loc>http://farshi.github.io/blog/categories/octopress/</loc>
+  </url>
+  <url>
+    <loc>http://farshi.github.io/blog/categories/</loc>
+  </url>
+  <url>
+    <loc>http://farshi.github.io/blog/categories/githuppages/</loc>
+  </url>
+  <url>
+    <loc>http://farshi.github.io/blog/categories/deploy/</loc>
+  </url>
+  <url>
+    <loc>http://farshi.github.io/blog/categories/error/</loc>
+  </url>
+  <url>
+    <loc>http://farshi.github.io/blog/categories/setup/</loc>
   </url>
 </urlset>
