@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://www.farshidesigns.com/sitemap.xml 
+Sitemap: http://farshi.github.io/sitemap.xml 
