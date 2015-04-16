@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Osx, | FARSHI DESIGNS]]></title>
+  <link href="http://www.farshidesigns.com/blog/categories/osx/atom.xml" rel="self"/>
+  <link href="http://www.farshidesigns.com/"/>
+  <updated>2015-04-16T13:46:51+10:00</updated>
+  <id>http://www.farshidesigns.com/</id>
+  <author>
+    <name><![CDATA[Reza Farshi]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sublime Text as a Default Editor for Git and Others]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/16/sublime-text-as-a-default-editor-for-git-and-others/"/>
+    <updated>2015-04-16T13:37:09+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/16/sublime-text-as-a-default-editor-for-git-and-others</id>
+    <content type="html"><![CDATA[<p>If you want to set sublime as a editor for git and other programs on your mac, depends on what is your bash you should edit  ~/.bash_profile or ~/.bashrc or ~/.zshrc and put these lines on it:</p>
+
+<pre><code>export VISUAL='subl -w'
+export EDITOR="$VISUAL"
+export GIT_EDITOR="$VISUAL"
+</code></pre>
+
+<p>Then open a new terminal and run this command :
+<code>
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+</code>
+ Now sublime can be run as a console program. Refer to <a href="https://www.sublimetext.com/docs/2/osx_command_line.html">Sublime documentation</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
