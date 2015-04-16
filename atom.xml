@@ -4,7 +4,7 @@
   <title><![CDATA[FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-16T13:46:51+10:00</updated>
+  <updated>2015-04-16T13:48:53+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -35,7 +35,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl</span></code></pre></td></tr></table></div></figure>
 
 
-<p> Now sublime can be run as a console program. Refer to <a href="https://www.sublimetext.com/docs/2/osx_command_line.html">Sublime documentation</a>.</p>
+<p> Now sublime can be run as a console program and when you hit <code>git commit</code> command sublime shows up in a new Tab. Refer to <a href="https://www.sublimetext.com/docs/2/osx_command_line.html">Sublime documentation</a>.</p>
 ]]></content>
   </entry>
   
