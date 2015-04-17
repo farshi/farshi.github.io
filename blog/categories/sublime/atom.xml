@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Sublime | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/sublime/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-16T13:48:53+10:00</updated>
+  <updated>2015-04-17T11:17:17+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/16/sublime-text-as-a-default-editor-for-git-and-others/"/>
     <updated>2015-04-16T13:37:09+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/16/sublime-text-as-a-default-editor-for-git-and-others</id>
-    <content type="html"><![CDATA[<p>If you want to set sublime as a editor for git and other programs on your mac, depends on what is your bash you should edit  ~/.bash_profile or ~/.bashrc or ~/.zshrc and put these lines on it:</p>
+    <content type="html"><![CDATA[<p>If you want to set sublime as the main editor for git and other programs on your mac, depends on what you bash you use you should edit  ~/.bash_profile or ~/.bashrc or ~/.zshrc and put these lines on it:</p>
 
 <pre><code>export VISUAL='subl -w'
 export EDITOR="$VISUAL"
