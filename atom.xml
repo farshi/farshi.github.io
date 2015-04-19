@@ -4,7 +4,7 @@
   <title><![CDATA[FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-17T11:17:17+10:00</updated>
+  <updated>2015-04-19T14:51:16+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -40,7 +40,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[An Installation Tips - Octopress Over GitHubPages.]]></title>
+    <title type="html"><![CDATA[Installation Tips - Octopress Over GitHubPages.]]></title>
     <link href="http://www.farshidesigns.com/blog/2015/04/15/an-installation-tips-octopress-over-githubpages/"/>
     <updated>2015-04-15T13:43:48+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/15/an-installation-tips-octopress-over-githubpages</id>
