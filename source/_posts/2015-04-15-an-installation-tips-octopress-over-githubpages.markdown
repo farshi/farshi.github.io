@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An Installation Tips - Octopress over GitHubPages."
+title: "Installation Tips - Octopress over GitHubPages."
 date: 2015-04-15 13:43:48 +1000
 comments: true
 categories: Octopress , GitHupPages , Deploy error , setup
