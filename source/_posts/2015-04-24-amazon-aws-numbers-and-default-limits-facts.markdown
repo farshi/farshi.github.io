@@ -3,14 +3,14 @@ layout: post
 title: "Amazon AWS Numbers and default Limits facts"
 date: 2015-04-24 16:01:40 +1000
 comments: true
-categories: Amazon , AWS , S3 , AWS Architecture Certificate , 
+categories: Amazon , AWS , S3 , 'AWS Architecture Certificate' , 
 ---
-I've collected some information about default limits and numbers in AWS from [Amazon AWS official site](http://aws.amazon.com/). May be you find it useful if you want to prepare for AWS architecture certification. This post my be updated in the future.
+I've collected some information about default limits in AWS from [Amazon AWS official website](http://aws.amazon.com/). May be you find it useful if you want to prepare for AWS architecture certification. This post my be updated in the future.
 
 * AWS is available in : 190 countries
-* Number of available region: 11
+* Number of available regions: 11
 * Number of Edge Locations: 52
-* Availability zone per regions: two or more
+* Availability zones per regions: two or more
 * Amazon S3 designed for 11 nines  , %99.99999999999 Availability 
 * Objects size range in S3  is :  Min: 1 Byte , Max: 5TB
 * S3 Number of buckets: 100 
