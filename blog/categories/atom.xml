@@ -4,7 +4,7 @@
   <title><![CDATA[Category: , | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories//atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-19T14:51:16+10:00</updated>
+  <updated>2015-04-24T16:14:29+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Amazon AWS Numbers and Default Limits Facts]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/24/amazon-aws-numbers-and-default-limits-facts/"/>
+    <updated>2015-04-24T16:01:40+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/24/amazon-aws-numbers-and-default-limits-facts</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve collected some information about default limits and numbers in AWS from <a href="http://aws.amazon.com/">Amazon AWS official site</a>. May be you find it useful if you want to prepare for AWS architecture certification. This post will be updated later.</p>
+
+<ul>
+<li>AWS is available in : 190 countries</li>
+<li>Number of available region: 11</li>
+<li>Number of Edge Locations: 52</li>
+<li>Availability zone per regions: two or more</li>
+<li>Amazon S3 designed for 11 nines  , %99.99999999999 Availability</li>
+<li>Objects size range in S3  is :  Min: 1 Byte , Max: 5TB</li>
+<li>S3 Number of buckets: 100</li>
+<li>Number of objects you can store: UNLIMITED</li>
+<li>Glacier retrieve time : 3 to 5 Hours</li>
+<li>RSS Availability is %99.99 instead S3 which is %99.99999999999</li>
+<li>RDS size range : Min: 5GB , Max:3TB</li>
+<li>Aurora size range : Min: 10GB  Max: 64TB</li>
+<li>Aurora Availability : 2 Copies for each 3 Zone &ndash;> 6 Copies</li>
+<li>Elastic Block Storage (EBS) size , Min: 1GB  , Max: 1TB</li>
+<li>VPC per region Max : 5 (default - increased upon request)</li>
+<li>Internet Gateway per region : Max 5 (default - increased upon request)</li>
+<li>Customer Gateways per region : Max 50 (default - increased upon request)</li>
+<li>Elastic IP addresses per region: Max 5 (default - increased upon request)</li>
+<li>Rout tables per VPC : Max 200 (default - increased upon request)</li>
+<li>Internet Attached to a subnet at time : Only 1</li>
+<li>Security group per VPC : Max 100</li>
+<li>Rules per Security Group: Max 50</li>
+<li>VPN connections per region: Max 50</li>
+<li>General purpose SSD EBS availability: 99.999%</li>
+<li>General purpose SSD EBS IOPS per GB: 3 to 3000 ( just for short period)</li>
+<li>Simple Queue Service(SQS) Message Size : Max 256 Kb</li>
+<li>AWS CloudFormaton Limits : 20 stack</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sublime Text as a Default Editor for Git and Others]]></title>
