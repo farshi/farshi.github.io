@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Architecture | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/architecture/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-25T18:32:24+10:00</updated>
+  <updated>2015-04-25T18:46:59+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[EC2 Notes]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials/"/>
+    <updated>2015-04-25T12:27:57+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials</id>
+    <content type="html"><![CDATA[<p>Some Notes about Elastic compute cloud , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+
+<ul>
+<li>Elastic Compute Cloud provides re-sizable compute capacity in cloud.</li>
+<li>It can be scale up or down as computing requirements changed.</li>
+<li>EC2 Options: Free Tier, On Demand , Reserved and Spot.</li>
+<li>Data Stored on a local instance storage will be deleted when you stop the instance.</li>
+<li>EBS backed storage will persist independently of the life of the instance</li>
+<li>EBS volume can be attached to only One instance at a time.</li>
+<li>Types of storage backed by EBS:
+
+<ul>
+<li>  General purpose SSD , 99.999% availability,</li>
+<li>  Provisioned IOPS SSD, Designed for IO intensive applications</li>
+<li>  Magnetic, Low cost , Suitable for infrequent accessed data</li>
+</ul>
+</li>
+<li>Identity Access Management (IAM) roles can not be assigned to an EC2 instance after the instance has been created.</li>
+<li>You can not add or change roles to an existing EC2 instance but you can change the permissions of a assigned role.</li>
+<li>EC2 placement properties:
+
+<ul>
+<li>  group of logical groups of instances in only one singe AZ</li>
+<li>  Are low latency ; has 10GBbps network throughput.</li>
+<li>  The name you choose for placement group should be unique in AWS account</li>
+<li>  Same size instances recommended to be put in a group</li>
+<li>  placement groups cannot be merged.</li>
+<li>  you can add existing instances to your placement group by creating AMI form that instance and then launch it to your placement group</li>
+</ul>
+</li>
+<li>Lambda is a compute service which run a code in response of events occurs in your resources and automatically manage that resource for you.</li>
+<li>Responses of lambda including capacity provisioning, OS and servers maintenance, security patch , logging and &hellip;</li>
+<li>Supported programming language for lambda is JavaScript.</li>
+<li>Lambda designed to be available in 99.99%</li>
+<li>First one million request of Lambda are free and there after is 0.20 per 1 mil request</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Amazon AWS Numerical Facts]]></title>

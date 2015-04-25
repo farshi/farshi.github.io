@@ -4,7 +4,7 @@
   <title><![CDATA[FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-25T18:32:24+10:00</updated>
+  <updated>2015-04-25T18:46:59+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[EC2 Essentials]]></title>
+    <title type="html"><![CDATA[EC2 Notes]]></title>
     <link href="http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials/"/>
     <updated>2015-04-25T12:27:57+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials</id>
@@ -27,7 +27,7 @@
 <li>Data Stored on a local instance storage will be deleted when you stop the instance.</li>
 <li>EBS backed storage will persist independently of the life of the instance</li>
 <li>EBS volume can be attached to only One instance at a time.</li>
-<li><p>Types of storage backed by EBS:</p>
+<li>Types of storage backed by EBS:
 
 <ul>
 <li>  General purpose SSD , 99.999% availability,</li>
@@ -35,7 +35,7 @@
 <li>  Magnetic, Low cost , Suitable for infrequent accessed data</li>
 </ul>
 </li>
-<li><p>Identity Access Management (IAM) roles can not be assigned to an EC2 instance after the instance has been created.</p></li>
+<li>Identity Access Management (IAM) roles can not be assigned to an EC2 instance after the instance has been created.</li>
 <li>You can not add or change roles to an existing EC2 instance but you can change the permissions of a assigned role.</li>
 <li>EC2 placement properties:
 
