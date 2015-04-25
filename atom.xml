@@ -4,7 +4,7 @@
   <title><![CDATA[FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-25T11:24:19+10:00</updated>
+  <updated>2015-04-25T12:30:52+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[EC2 Essentials]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials/"/>
+    <updated>2015-04-25T12:27:57+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials</id>
+    <content type="html"><![CDATA[<p>EC2</p>
+
+<ul>
+<li>Elastic Compute Cloud provides re-sizable compute capacity in cloud.</li>
+<li>It can be scale up or down as computing requirements changes.</li>
+<li>EC2 Options: Free Tier, On Demand , Reserved, Spot</li>
+<li>Data Stored on a local instance storage will be deleted when you stop the instance.</li>
+<li>EBS backed storage will persist independently of the life of the instance</li>
+<li>EBS volume can be attached to only One instance at a time.</li>
+<li>Types of storage backed by EBS:
+-General purpose SSD , 99.999% availability,
+-Provisioned IOPS SSD, Designed for IO intensive applications
+-Magnetic, Low cost , Suitable for infrequent accessed data</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Amazon AWS Numerical Facts]]></title>
