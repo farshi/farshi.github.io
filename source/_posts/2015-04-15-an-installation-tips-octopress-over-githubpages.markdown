@@ -3,9 +3,8 @@ layout: post
 title: "Installation Tips - Octopress over GitHubPages."
 date: 2015-04-15 13:43:48 +1000
 comments: true
-categories: Octopress , GitHupPages , Deploy error , setup
+categories: [Octopress , GitHupPages , Deploy error]
 ---
-
 
 I've recently setup my weblog  using Octopress weblog framework over githubpages. I noticed some delicate hints should be applied when setting up Octopress over GitHubPages. When you are trying to install the Octopress weblog framework over your GitHubPages, according to the Octopress installation guide you should fist login into your GitHub account and create a repository and  name the repository with the format username.github.io, where username is your GitHub user name or organization name. now some tips to prevent getting errors like this:
 

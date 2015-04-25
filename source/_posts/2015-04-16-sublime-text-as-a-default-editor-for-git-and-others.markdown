@@ -3,7 +3,7 @@ layout: post
 title: "Sublime Text as a Default Editor for Git and others"
 date: 2015-04-16 13:37:09 +1000
 comments: true
-categories: Sublime Text , Git , Terminal , Mac OSx, 
+categories: [Sublime Text , Git , Terminal , Mac OSx] 
 ---
 If you want to set sublime as the main editor for git and other programs on your mac, depends on what you bash you use you should edit  ~/.bash_profile or ~/.bashrc or ~/.zshrc and put these lines on it:
 

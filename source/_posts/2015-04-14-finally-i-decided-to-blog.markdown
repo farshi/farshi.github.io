@@ -3,8 +3,7 @@ layout: post
 title: "Finally I Decided to blog"
 date: 2015-04-14 01:45:43 +1000
 comments: true
-categories: 
-
+categories: [My First Post]
 ---
 
 Every time I was reading some professional hackers blogs, I thought to myself how good it would be if I had my own weblog and  streamed my thoughts through it.

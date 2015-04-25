@@ -13,3 +13,9 @@ node_modules
 Gemfile.lock
 
 draft1
+
+source/_posts/CloudFront
+
+source/_posts/EC2
+
+source/_posts/S3 Essentials
