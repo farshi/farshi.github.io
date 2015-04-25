@@ -27,28 +27,19 @@
     <loc>http://www.farshidesigns.com/</loc>
   </url>
   <url>
-    <loc>http://www.farshidesigns.com/blog/categories/octopress/</loc>
+    <loc>http://www.farshidesigns.com/blog/categories/my-first-post/</loc>
   </url>
   <url>
-    <loc>http://www.farshidesigns.com/blog/categories/</loc>
+    <loc>http://www.farshidesigns.com/blog/categories/octopress/</loc>
   </url>
   <url>
     <loc>http://www.farshidesigns.com/blog/categories/githuppages/</loc>
   </url>
   <url>
-    <loc>http://www.farshidesigns.com/blog/categories/deploy/</loc>
+    <loc>http://www.farshidesigns.com/blog/categories/deploy-error/</loc>
   </url>
   <url>
-    <loc>http://www.farshidesigns.com/blog/categories/error/</loc>
-  </url>
-  <url>
-    <loc>http://www.farshidesigns.com/blog/categories/setup/</loc>
-  </url>
-  <url>
-    <loc>http://www.farshidesigns.com/blog/categories/sublime/</loc>
-  </url>
-  <url>
-    <loc>http://www.farshidesigns.com/blog/categories/text/</loc>
+    <loc>http://www.farshidesigns.com/blog/categories/sublime-text/</loc>
   </url>
   <url>
     <loc>http://www.farshidesigns.com/blog/categories/git/</loc>
@@ -57,10 +48,7 @@
     <loc>http://www.farshidesigns.com/blog/categories/terminal/</loc>
   </url>
   <url>
-    <loc>http://www.farshidesigns.com/blog/categories/mac/</loc>
-  </url>
-  <url>
-    <loc>http://www.farshidesigns.com/blog/categories/osx/</loc>
+    <loc>http://www.farshidesigns.com/blog/categories/mac-osx/</loc>
   </url>
   <url>
     <loc>http://www.farshidesigns.com/blog/categories/amazon/</loc>
@@ -72,13 +60,7 @@
     <loc>http://www.farshidesigns.com/blog/categories/s3/</loc>
   </url>
   <url>
-    <loc>http://www.farshidesigns.com/blog/categories/aws/</loc>
-  </url>
-  <url>
-    <loc>http://www.farshidesigns.com/blog/categories/architecture/</loc>
-  </url>
-  <url>
-    <loc>http://www.farshidesigns.com/blog/categories/certificate/</loc>
+    <loc>http://www.farshidesigns.com/blog/categories/aws-architecture-certificate/</loc>
   </url>
   <url>
     <loc>http://www.farshidesigns.com/blog/categories/ec2/</loc>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: My First Post | FARSHI DESIGNS]]></title>
+  <link href="http://www.farshidesigns.com/blog/categories/my-first-post/atom.xml" rel="self"/>
+  <link href="http://www.farshidesigns.com/"/>
+  <updated>2015-04-25T18:54:13+10:00</updated>
+  <id>http://www.farshidesigns.com/</id>
+  <author>
+    <name><![CDATA[Reza Farshi]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Finally I Decided to Blog]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/14/finally-i-decided-to-blog/"/>
+    <updated>2015-04-14T01:45:43+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/14/finally-i-decided-to-blog</id>
+    <content type="html"><![CDATA[<p>Every time I was reading some professional hackers blogs, I thought to myself how good it would be if I had my own weblog and  streamed my thoughts through it.</p>
+
+<p>Today I&rsquo;m so happy and proud of myself coz finally I decided to create my own weblog. I believe in this:</p>
+
+<p><blockquote><p></p></p><p><p>Do the difficult things while they are easy and do the great things while they are small. A journey of a thousand miles must begin with a single step.</p></p><p><p></p><footer><strong>Lao Tzu</strong></footer></blockquote></p>
+]]></content>
+  </entry>
+  
+</feed>
