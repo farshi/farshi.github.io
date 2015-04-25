@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: 'Amazon | FARSHI DESIGNS]]></title>
+  <title><![CDATA[Category: Amazon | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/amazon/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-25T18:46:59+10:00</updated>
+  <updated>2015-04-25T18:50:05+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -14,45 +14,41 @@
 
   
   <entry>
-    <title type="html"><![CDATA[EC2 Notes]]></title>
-    <link href="http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials/"/>
-    <updated>2015-04-25T12:27:57+10:00</updated>
-    <id>http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials</id>
-    <content type="html"><![CDATA[<p>Some Notes about Elastic compute cloud , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+    <title type="html"><![CDATA[Amazon AWS Numerical Facts]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/24/amazon-aws-numbers-and-default-limits-facts/"/>
+    <updated>2015-04-24T16:01:40+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/24/amazon-aws-numbers-and-default-limits-facts</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve collected some information about default limits in AWS and other numerical facts from <a href="http://aws.amazon.com/">Amazon AWS official website</a>. May be you find it useful if you want to prepare for AWS architecture certification. This post my be updated in the future.</p>
 
 <ul>
-<li>Elastic Compute Cloud provides re-sizable compute capacity in cloud.</li>
-<li>It can be scale up or down as computing requirements changed.</li>
-<li>EC2 Options: Free Tier, On Demand , Reserved and Spot.</li>
-<li>Data Stored on a local instance storage will be deleted when you stop the instance.</li>
-<li>EBS backed storage will persist independently of the life of the instance</li>
-<li>EBS volume can be attached to only One instance at a time.</li>
-<li>Types of storage backed by EBS:
-
-<ul>
-<li>  General purpose SSD , 99.999% availability,</li>
-<li>  Provisioned IOPS SSD, Designed for IO intensive applications</li>
-<li>  Magnetic, Low cost , Suitable for infrequent accessed data</li>
-</ul>
-</li>
-<li>Identity Access Management (IAM) roles can not be assigned to an EC2 instance after the instance has been created.</li>
-<li>You can not add or change roles to an existing EC2 instance but you can change the permissions of a assigned role.</li>
-<li>EC2 placement properties:
-
-<ul>
-<li>  group of logical groups of instances in only one singe AZ</li>
-<li>  Are low latency ; has 10GBbps network throughput.</li>
-<li>  The name you choose for placement group should be unique in AWS account</li>
-<li>  Same size instances recommended to be put in a group</li>
-<li>  placement groups cannot be merged.</li>
-<li>  you can add existing instances to your placement group by creating AMI form that instance and then launch it to your placement group</li>
-</ul>
-</li>
-<li>Lambda is a compute service which run a code in response of events occurs in your resources and automatically manage that resource for you.</li>
-<li>Responses of lambda including capacity provisioning, OS and servers maintenance, security patch , logging and &hellip;</li>
-<li>Supported programming language for lambda is JavaScript.</li>
-<li>Lambda designed to be available in 99.99%</li>
-<li>First one million request of Lambda are free and there after is 0.20 per 1 mil request</li>
+<li>AWS is available in : 190 countries</li>
+<li>Number of available regions: 11</li>
+<li>Number of Edge Locations: 52</li>
+<li>Availability zones per regions: two or more</li>
+<li>Amazon S3 designed for 11 nines durability , 99.99999999999% in a given year</li>
+<li>Amazon S3 availability is 99.99% in a given year</li>
+<li>Objects size range in S3  is :  Min: 1 Byte , Max: 5TB</li>
+<li>S3 Number of buckets: 100</li>
+<li>Number of objects you can store: UNLIMITED</li>
+<li>Glacier retrieve time : 3 to 5 Hours</li>
+<li>RSS type durability is %99.99 instead Standard S3 which is %99.99999999999</li>
+<li>RDS size range : Min: 5GB , Max:3TB</li>
+<li>Aurora size range : Min: 10GB  Max: 64TB</li>
+<li>Aurora Availability : 2 Copies for each 3 Zone &ndash;> 6 Copies</li>
+<li>Elastic Block Storage (EBS) size , Min: 1GB  , Max: 1TB</li>
+<li>VPC per region Max : 5 (default - increased upon request)</li>
+<li>Internet Gateway per region : Max 5 (default - increased upon request)</li>
+<li>Customer Gateways per region : Max 50 (default - increased upon request)</li>
+<li>Elastic IP addresses per region: Max 5 (default - increased upon request)</li>
+<li>Rout tables per VPC : Max 200 (default - increased upon request)</li>
+<li>Internet Attached to a subnet at time : Only 1</li>
+<li>Security group per VPC : Max 100</li>
+<li>Rules per Security Group: Max 50</li>
+<li>VPN connections per region: Max 50</li>
+<li>General purpose SSD EBS availability: 99.999%</li>
+<li>General purpose SSD EBS IOPS per GB: 3 to 3000 ( just for short period)</li>
+<li>Simple Queue Service(SQS) Message Size : Max 256 Kb</li>
+<li>AWS CloudFormaton Limits : 20 stack</li>
 </ul>
 
 ]]></content>

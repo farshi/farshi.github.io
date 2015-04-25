@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ec2 | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/ec2/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-25T18:46:59+10:00</updated>
+  <updated>2015-04-25T18:50:05+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -37,7 +37,7 @@
 </li>
 <li>Identity Access Management (IAM) roles can not be assigned to an EC2 instance after the instance has been created.</li>
 <li>You can not add or change roles to an existing EC2 instance but you can change the permissions of a assigned role.</li>
-<li>EC2 placement properties:
+<li>EC2 placement group properties:
 
 <ul>
 <li>  group of logical groups of instances in only one singe AZ</li>
