@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 'Aws | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/aws/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-24T20:06:20+10:00</updated>
+  <updated>2015-04-25T11:20:36+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -25,12 +25,13 @@
 <li>Number of available regions: 11</li>
 <li>Number of Edge Locations: 52</li>
 <li>Availability zones per regions: two or more</li>
-<li>Amazon S3 designed for 11 nines  , %99.99999999999 Availability</li>
+<li>Amazon S3 designed for 11 nines durability , 99.99999999999% in a given year</li>
+<li>Amazon S3 availability is 99.99% in a given year</li>
 <li>Objects size range in S3  is :  Min: 1 Byte , Max: 5TB</li>
 <li>S3 Number of buckets: 100</li>
 <li>Number of objects you can store: UNLIMITED</li>
 <li>Glacier retrieve time : 3 to 5 Hours</li>
-<li>RSS Availability is %99.99 instead S3 which is %99.99999999999</li>
+<li>RSS type durability is %99.99 instead Standard S3 which is %99.99999999999</li>
 <li>RDS size range : Min: 5GB , Max:3TB</li>
 <li>Aurora size range : Min: 10GB  Max: 64TB</li>
 <li>Aurora Availability : 2 Copies for each 3 Zone &ndash;> 6 Copies</li>
