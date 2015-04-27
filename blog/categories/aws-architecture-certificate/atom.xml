@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Aws Architecture Certificate | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/aws-architecture-certificate/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-27T22:51:31+10:00</updated>
+  <updated>2015-04-27T22:53:53+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Amazon S3 Notes]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-s3-notes/"/>
+    <updated>2015-04-27T22:48:19+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-s3-notes</id>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon Simple Storage Service (S3) service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
+
+<p>Amazon Simple Storage Service (S3) :</p>
+
+<ul>
+<li>Files can be from 1 Byte to 5 TB</li>
+<li>Files are stored in Buckets and there is no limit.</li>
+<li>Buckets name must be unique in a region level</li>
+<li>Buckets are private by default</li>
+<li>S3 Files are stored as a object in buckets</li>
+<li>S3 supports MultiPart uploads,It is necessary for files bigger than 5Gb</li>
+<li>S3 support resumable uploads.</li>
+<li>S3 is consistent cross availability zones</li>
+<li>S3 has a Life Cycle management, you can archive data after a specific time period from upload time in glacier.</li>
+<li>Amazon S3 designed for 11 nines durability , 99.99999999999 in a given year</li>
+<li>Amazon S3 availability is 99.99% in a given  year</li>
+<li>Files can be encrypted on S3</li>
+<li>S3 has versioning feature , includes all writes even if you delete an object</li>
+<li>When you enable the versioning , you can not disable it , but you can suspend it</li>
+<li>Reduced Redundancy Storage (RSS) data availability and durability is 99.99%</li>
+<li>RSS is suitable for storing low frequency data.</li>
+<li>RSS Cost: 3 Cent per GB per Month</li>
+<li>Glacier is a low cost storage service suitable for data archiving.</li>
+<li>Glacier Cost: 1 Cent per GB per Month</li>
+<li>Glacier retrieval time 3 to 5 Hours</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Amazon SNS Notes]]></title>
@@ -136,44 +171,6 @@
 <li>Like as a firewall , Only one ACL can be assigned to the subnet.cardinality between ACL-Subnet is Many to one.</li>
 <li>Amazon corporate network is segregated from AWS network.</li>
 <li>Port scanning is not allowed in AWS by default. for vulnerability scan you must request it from amazon for a short period.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Amazon RedShift Notes]]></title>
-    <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-redshift-notes/"/>
-    <updated>2015-04-27T22:06:33+10:00</updated>
-    <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-redshift-notes</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon RedShift service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
-
-<p>Amazon RedShift is the Amazon warehouse service in cloud, characteristics are :</p>
-
-<ul>
-<li>fast and powerful</li>
-<li>fully managed service</li>
-<li>Peta byte scale</li>
-<li>Instead of storing data as a series of rows, it has columnar data storage</li>
-<li>Column-based storage require far fewer I/Os so greatly improving query performance</li>
-<li>10 Time Faster than traditional data warehouses.</li>
-<li>in column-base storage , similar data is stored sequentially , so data can be compressed much more than row-base storage,</li>
-<li>RedShift automatically samples your data and select the most appropriate compression schema.</li>
-<li>Redshift has MPP ( Massively Parallel Processing) feature.</li>
-<li>by MPP , data are distributed and queries load across all nodes to your data</li>
-<li>cost is less than a tenth of most other data warehouse solutions.</li>
-<li>configuration of RedShif can be Single node(160Gb) or Multi-node.</li>
-<li>in Multi-Node mode , One node is Leader node , and then you can create  up to 128 compute nodes.</li>
-<li>Leader node manages client connections and receives queries</li>
-<li>Computed Node store data and perform queries and do computations</li>
-<li>You will not charged for leader node hours; only compute nodes will incur charges.</li>
-<li>Encrypted in transit using SSL.</li>
-<li>Encrypted at rest using AES-256</li>
-<li>By default Redshift takes care of key management</li>
-<li>You can manage your own keys through HSM or by Amazon Key Management Service.</li>
-<li>Currently only available in 1 AZ</li>
-<li>Can restore snapshots to new AZ&rsquo;s in the event of outage.</li>
-<li>Fail over is not automatically , it&rsquo;s manual.</li>
 </ul>
 
 ]]></content>
