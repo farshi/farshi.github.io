@@ -3,16 +3,17 @@ layout: post
 title: "EC2 Notes"
 date: 2015-04-25 12:27:57 +1000
 comments: true
-categories: [EC2 , Amazon Architecture Certificate , Lambda ,IAM,Placement Group]
+categories: [EC2 , AWS Architecture Certificate , Lambda ,IAM,Placement Group]
 ---
 
-Some Notes about Elastic compute cloud , you will find it useful if you want to be prepare for AWS architecture certificate.
+Some Notes about Elastic compute cloud , you will find it useful if you want to prepare for AWS architecture certificate.
 
 * Elastic Compute Cloud provides re-sizable compute capacity in cloud.
 * It can be scale up or down as computing requirements changed.
 * EC2 Options: Free Tier, On Demand , Reserved and Spot.
 * Data Stored on a local instance storage will be deleted when you stop the instance.
 * EBS backed storage will persist independently of the life of the instance
+* AWS uses standard technologies detailed in DoD 5220.22-M or NIST 800-88 guidelines for media sanitization to destroy data as part of the decommissioning process.
 * EBS volume can be attached to only One instance at a time.
 * Types of storage backed by EBS:
 	-	General purpose SSD , 99.999% availability, 
