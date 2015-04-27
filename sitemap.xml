@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.farshidesigns.com/blog/2015/04/27/amazon-sns-notes/</loc>
+    <lastmod>2015-04-27T22:10:57+10:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/2015/04/27/amazon-swf-notes/</loc>
+    <lastmod>2015-04-27T22:10:17+10:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/2015/04/27/amazon-sqs/</loc>
+    <lastmod>2015-04-27T22:09:04+10:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc/</loc>
+    <lastmod>2015-04-27T22:08:11+10:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/2015/04/27/amazon-redshift-notes/</loc>
+    <lastmod>2015-04-27T22:06:33+10:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/2015/04/27/amazon-dynamodb-notes/</loc>
+    <lastmod>2015-04-27T22:05:47+10:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/2015/04/27/amazon-rds-notes/</loc>
+    <lastmod>2015-04-27T22:04:28+10:00</lastmod>
+  </url>
+  <url>
     <loc>http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials/</loc>
     <lastmod>2015-04-25T12:27:57+10:00</lastmod>
   </url>
@@ -66,9 +94,6 @@
     <loc>http://www.farshidesigns.com/blog/categories/ec2/</loc>
   </url>
   <url>
-    <loc>http://www.farshidesigns.com/blog/categories/amazon-architecture-certificate/</loc>
-  </url>
-  <url>
     <loc>http://www.farshidesigns.com/blog/categories/lambda/</loc>
   </url>
   <url>
@@ -76,5 +101,26 @@
   </url>
   <url>
     <loc>http://www.farshidesigns.com/blog/categories/placement-group/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/categories/amazon-rds/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/categories/amazon-dynamodb/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/categories/amazon-redshift/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/categories/amazon-vpc/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/categories/amazon-sqs/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/categories/amazon-swf/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/categories/amazon-sns/</loc>
   </url>
 </urlset>

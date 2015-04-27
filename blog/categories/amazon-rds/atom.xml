@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Amazon Rds | FARSHI DESIGNS]]></title>
+  <link href="http://www.farshidesigns.com/blog/categories/amazon-rds/atom.xml" rel="self"/>
+  <link href="http://www.farshidesigns.com/"/>
+  <updated>2015-04-27T22:24:38+10:00</updated>
+  <id>http://www.farshidesigns.com/</id>
+  <author>
+    <name><![CDATA[Reza Farshi]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Amazon RDS Notes]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-rds-notes/"/>
+    <updated>2015-04-27T22:04:28+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-rds-notes</id>
+    <content type="html"><![CDATA[<p> Some Notes about Amazon RDS service, you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+
+<ul>
+<li>Amazon RDS now supports these Relational (OLTP): MySQL, Oracle , SQL , PostgreSql, Aurora</li>
+<li>Supports Non-Relational No-SQL database , DynamoDB</li>
+<li>Supports Data warehousing database (OLAP), RedShift</li>
+<li>Supports ElasticCache (fast in-memory cache service), MemCached and Redis</li>
+<li>Aurora is a MySql Compatible Database , Not accessible yet.</li>
+<li>Aurora provides up to five times better performance than MySQL.</li>
+<li>Aurora cost is one tenth that of a commercial database while delivering similar performance and availability.</li>
+<li>Aurora start with 10Gb, Scales in 10 Gb increments to 64Tb.</li>
+<li>compute resources can scale up to 32vCPUs and 244 Gb of Memory.</li>
+<li>with Aurora you will get 6 copies of your data (2 copies in each 3 AZ).</li>
+<li>Aurora storage is self-healing. Data blocks scanned and fixed automatically.</li>
+<li>you can loose 2 copies without effecting write performance.</li>
+<li>you can loose 3 copies without effecting read performance.</li>
+<li>Maximum Backup Retention Period for RDS is 35 days</li>
+<li>When you want restore database to specific time , entirely new database will be created and endpoints will be different from the original database endpoint</li>
+<li>you can bring your own license in the case of selecting Oracle Database as a RDS Engine.</li>
+<li>You can modify MySql DB instance and increase storage size , change engine , change database name , password and &hellip;</li>
+<li><p>Microsoft SQL server DB instance has some restrictions:</p></li>
+<li><p> You can not modify Microsoft SQL server DB instance storage size , Amazon does not support increasing storage on a SQL server DB Instance.</p></li>
+<li> A newly created SQL server does not contain database. you should connect from SQL server management studio and create your database.</li>
+<li>The maximum storage size for SQL server DB instance is 1024 GB.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

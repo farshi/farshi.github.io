@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Amazon Redshift | FARSHI DESIGNS]]></title>
+  <link href="http://www.farshidesigns.com/blog/categories/amazon-redshift/atom.xml" rel="self"/>
+  <link href="http://www.farshidesigns.com/"/>
+  <updated>2015-04-27T22:24:38+10:00</updated>
+  <id>http://www.farshidesigns.com/</id>
+  <author>
+    <name><![CDATA[Reza Farshi]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Amazon RedShift Notes]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-redshift-notes/"/>
+    <updated>2015-04-27T22:06:33+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-redshift-notes</id>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon RedShift service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+
+<p>Amazon RedShift is the Amazon warehouse service in cloud, characteristics are :</p>
+
+<ul>
+<li>fast and powerful</li>
+<li>fully managed service</li>
+<li>Peta byte scale</li>
+<li>Instead of storing data as a series of rows, it has columnar data storage</li>
+<li>Column-based storage require far fewer I/Os so greatly improving query performance</li>
+<li>10 Time Faster than traditional data warehouses.</li>
+<li>in column-base storage , similar data is stored sequentially , so data can be compressed much more than row-base storage,</li>
+<li>RedShift automatically samples your data and select the most appropriate compression schema.</li>
+<li>Redshift has MPP ( Massively Parallel Processing) feature.</li>
+<li>by MPP , data are distributed and queries load across all nodes to your data</li>
+<li>cost is less than a tenth of most other data warehouse solutions.</li>
+<li>configuration of RedShif can be Single node(160Gb) or Multi-node.</li>
+<li>in Multi-Node mode , One node is Leader node , and then you can create  up to 128 compute nodes.</li>
+<li>Leader node manages client connections and receives queries</li>
+<li>Computed Node store data and perform queries and do computations</li>
+<li>You will not charged for leader node hours; only compute nodes will incur charges.</li>
+<li>Encrypted in transit using SSL.</li>
+<li>Encrypted at rest using AES-256</li>
+<li>By default Redshift takes care of key management</li>
+<li>You can manage your own keys through HSM or by Amazon Key Management Service.</li>
+<li>Currently only available in 1 AZ</li>
+<li>Can restore snapshots to new AZ&rsquo;s in the event of outage.</li>
+<li>Fail over is not automatically , it&rsquo;s manual.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

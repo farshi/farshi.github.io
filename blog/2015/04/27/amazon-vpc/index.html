@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Amazon VPC - FARSHI DESIGNS</title>
+  <meta name="author" content="Reza Farshi">
+
+  
+  <meta name="description" content="Some Notes about Amazon VPC service , you will find it useful if you want to be prepare for AWS architecture certificate. Amazon VPC: * It is like a &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="FARSHI DESIGNS" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-61874438-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">FARSHI DESIGNS</a></h1>
+  
+    <h2>My thoughts on Software Architecture, Cloud Implementation , DevOps, Agile, Technology, Life and my favorite sport Paragliding.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="www.farshidesigns.com">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Amazon VPC</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-04-27T22:08:11+10:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>10:08 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Some Notes about Amazon VPC service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+
+<p>Amazon VPC:
+        * It is like a virtual data center in cloud.
+        * lets you provision a logically isolated sections of the Amazon web service (AWS) cloud.
+        * you have complete control over your virtual network environment.
+        * you can select your own IP address range
+        * you can crate your subnets
+        * you can configure route tables
+        * you can setup network gateways ( Internet gateway and Customer gateway).
+        * With VPC you have two level of security groups:
+            1.instance security groups.
+            2.subnet network access control lists (ACLS)
+        * using Amazon Direct Connect you can connect your corporate data center and your AWS VPC.
+        <em>There is a default VPC which is user friendly, allowing you to immediately deploy instances.
+        * All Subnets in default VPC have an Internet gateway attached.
+        * Each EC2 instance has both a public and private IP address.
+        * If you delete the default CVPC the only way to get it back is to contact AWS.
+        * you can user VPC Peering to connect one VPC with another.
+        * when you use VPC Peering , instances behave as if they were on the same private network.
+        * you can peer even VPC&rsquo;s with other AWS accounts.
+        * Peering is in a star configuration.So Siblings VPC&rsquo;s can not directly talk to each other and should use centric one.
+        * Elastic IP addresses, Internet Gateways, VPCs per region : Max 5
+        * VPC connections per region, Customer Gateways per region: Max 50
+        * Route tables per region: Max 200
+        * Security groups per VPC: Max 100
+        * Rules per security group: Max 50
+        * Dedicated VPC&rsquo;s are expensive because all of instance underneath will be dedicated.
+        * When you create a VPC, one route table and one ACL will be created automatically.
+        * Your subnets can not be in different availability zones , just in one AZ.
+        * you can have only One Internet gateway per VPC.
+        * putting an instance in a public subnet is not enough to make public access to that instance.you should assign public IP address to it to make it accessible from the Internet.
+        * For making a NAT instance as a router for routing private subnet traffic to the Internet you should disable source/destination check for that NAT instance.
+        * Access Control list act as firewall and rules are applied to the entire subnet.
+        </em>If you don&rsquo;t associate a ACL to a subnet, default ACL which allows all incoming and outgoing traffic will be assigned to a subnet automatically.
+        * Rules in ACL assigned order numbers, so rule #100 evaluated before rule #200. Amazon recommends to increment rules number by 100.
+        * When you create a new ACL, incoming and outgoing traffic is denied by default.
+        * Like as a firewall , Only one ACL can be assigned to the subnet.cardinality between ACL-Subnet is Many to one.
+        * Amazon corporate network is segregated from AWS network.
+        * Port scanning is not allowed in AWS by default. for vulnerability scan you must request it from amazon for a short period.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Reza Farshi</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-04-27T22:08:11+10:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>10:08 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/amazon-vpc/'>amazon vpc</a>, <a class='category' href='/blog/categories/aws-architecture-certificate/'>aws architecture certificate</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc/" data-via="farshitwitts" data-counturl="http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/04/27/amazon-redshift-notes/" title="Previous Post: Amazon RedShift Notes">&laquo; Amazon RedShift Notes</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2015/04/27/amazon-sqs/" title="Next Post: Amazon SQS Notes">Amazon SQS Notes &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/04/27/amazon-sns-notes/">Amazon SNS Notes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/27/amazon-swf-notes/">Amazon SWF Notes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/27/amazon-sqs/">Amazon SQS Notes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/27/amazon-vpc/">Amazon VPC</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/27/amazon-redshift-notes/">Amazon RedShift Notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/reza.farshi?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Reza Farshi -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'farshidesigns';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc/';
+        var disqus_url = 'http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<a title="Real Time Web Analytics" href="http://clicky.com/100835142"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100835142); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100835142ns.gif" /></p></noscript>
+
+
+</body>
+</html>

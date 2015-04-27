@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Aws Architecture Certificate | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/aws-architecture-certificate/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-25T19:16:16+10:00</updated>
+  <updated>2015-04-27T22:24:38+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -14,41 +14,152 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Amazon AWS Numerical Facts]]></title>
-    <link href="http://www.farshidesigns.com/blog/2015/04/24/amazon-aws-numbers-and-default-limits-facts/"/>
-    <updated>2015-04-24T16:01:40+10:00</updated>
-    <id>http://www.farshidesigns.com/blog/2015/04/24/amazon-aws-numbers-and-default-limits-facts</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve collected some information about default limits in AWS and other numerical facts from <a href="http://aws.amazon.com/">Amazon AWS official website</a>. May be you find it useful if you want to prepare for AWS architecture certification. This post my be updated in the future.</p>
+    <title type="html"><![CDATA[Amazon SNS Notes]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-sns-notes/"/>
+    <updated>2015-04-27T22:10:57+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-sns-notes</id>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon SMS service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+
+<p>Amazon Simple Notification service  (SNS) :</p>
+
+<pre><code>* Is a web service that makes it easy to set up, operate, and send notifications from the cloud.
+* Amazon SNS allows the "publish-subscribe" (pub-sub) messaging paradigm.
+* SNS eliminates the need to periodically check or pull for new information and updates.
+* it is inexpensive, pay-as-you-go model with no up-front costs.
+* Amazon SNS can be deliver notifications by SMS text messages or email, to Amazon Simple Queue Service (SQS) queues, or any HTTP endpoint.
+* To prevent messages from being lost,all messages published to Amazon SNS are stored redundantly across multiple availability zones.
+* SNS Topic allows you to group multiple recipients. It acts like a access point for allowing recipients to dynamically subscribe for identical copies of the same notification.
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Amazon SWF Notes]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-swf-notes/"/>
+    <updated>2015-04-27T22:10:17+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-swf-notes</id>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon SWF service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+
+<p>Amazon Simple Work flow Service (SWF):</p>
+
+<pre><code>* is a web service that makes it easy to coordinate work across distributed application components.
+* enables applications for a range of use cases, including media processing, web application back-ends, business process work flows, and analytics pipelines.
+* Tasks represent invocations of various processing steps in an application which can be performed by executable code, web service calls, human actions and scrips.
+* SWF presents a task-oriented API
+* SWF ensures that a task is assigned only once and is never duplicated.
+* SWF keeps track of all the tasks and events in an application.
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Amazon SQS Notes]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-sqs/"/>
+    <updated>2015-04-27T22:09:04+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-sqs</id>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon SQS service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+
+<p>Amazon Simple queue service (SQS):</p>
+
+<pre><code>    * is A web service that gives you access to a message queues.
+    * Queues can be used to store messages while waiting for a computer to process them.
+    * is distributed Queue System.
+    * is fast and reliable 
+    * A queue is a temporary repository for messages hat are waiting processing.
+    *By using SQS you can decouple the components of an application so they run independently.
+    * Messages can contain up to 256KB of text in any format.
+    * Messages can be retrieved by any distributed component by using Amazon SQS API.
+    * Amazon SQS ensures delivery of each message at least once. so one message can be read by many distributed application components simultaneously. And They are remained until you remove them from the queue yourself.
+    * SQS does not support FIFO ( First In Firs Out).
+    * SQS is a pull system , and messages are not pushed out like SNS.
+    * Visibility time out period for a message starts when a component retrieves the message. The default visibility time out is minimum 30 seconds and maximum 12 hours.
+    * SQS Billed at 64kb Chunks.
+    * Firs 1 million Amazon SQS request per month are free.
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Amazon VPC]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc/"/>
+    <updated>2015-04-27T22:08:11+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc</id>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon VPC service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+
+<p>Amazon VPC:
+        * It is like a virtual data center in cloud.
+        * lets you provision a logically isolated sections of the Amazon web service (AWS) cloud.
+        * you have complete control over your virtual network environment.
+        * you can select your own IP address range
+        * you can crate your subnets
+        * you can configure route tables
+        * you can setup network gateways ( Internet gateway and Customer gateway).
+        * With VPC you have two level of security groups:
+            1.instance security groups.
+            2.subnet network access control lists (ACLS)
+        * using Amazon Direct Connect you can connect your corporate data center and your AWS VPC.
+        <em>There is a default VPC which is user friendly, allowing you to immediately deploy instances.
+        * All Subnets in default VPC have an Internet gateway attached.
+        * Each EC2 instance has both a public and private IP address.
+        * If you delete the default CVPC the only way to get it back is to contact AWS.
+        * you can user VPC Peering to connect one VPC with another.
+        * when you use VPC Peering , instances behave as if they were on the same private network.
+        * you can peer even VPC&rsquo;s with other AWS accounts.
+        * Peering is in a star configuration.So Siblings VPC&rsquo;s can not directly talk to each other and should use centric one.
+        * Elastic IP addresses, Internet Gateways, VPCs per region : Max 5
+        * VPC connections per region, Customer Gateways per region: Max 50
+        * Route tables per region: Max 200
+        * Security groups per VPC: Max 100
+        * Rules per security group: Max 50
+        * Dedicated VPC&rsquo;s are expensive because all of instance underneath will be dedicated.
+        * When you create a VPC, one route table and one ACL will be created automatically.
+        * Your subnets can not be in different availability zones , just in one AZ.
+        * you can have only One Internet gateway per VPC.
+        * putting an instance in a public subnet is not enough to make public access to that instance.you should assign public IP address to it to make it accessible from the Internet.
+        * For making a NAT instance as a router for routing private subnet traffic to the Internet you should disable source/destination check for that NAT instance.
+        * Access Control list act as firewall and rules are applied to the entire subnet.
+        </em>If you don&rsquo;t associate a ACL to a subnet, default ACL which allows all incoming and outgoing traffic will be assigned to a subnet automatically.
+        * Rules in ACL assigned order numbers, so rule #100 evaluated before rule #200. Amazon recommends to increment rules number by 100.
+        * When you create a new ACL, incoming and outgoing traffic is denied by default.
+        * Like as a firewall , Only one ACL can be assigned to the subnet.cardinality between ACL-Subnet is Many to one.
+        * Amazon corporate network is segregated from AWS network.
+        * Port scanning is not allowed in AWS by default. for vulnerability scan you must request it from amazon for a short period.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Amazon RedShift Notes]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-redshift-notes/"/>
+    <updated>2015-04-27T22:06:33+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-redshift-notes</id>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon RedShift service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+
+<p>Amazon RedShift is the Amazon warehouse service in cloud, characteristics are :</p>
 
 <ul>
-<li>AWS is available in : 190 countries</li>
-<li>Number of available regions: 11</li>
-<li>Number of Edge Locations: 52</li>
-<li>Availability zones per regions: two or more</li>
-<li>Amazon S3 designed for 11 nines durability , 99.99999999999% in a given year</li>
-<li>Amazon S3 availability is 99.99% in a given year</li>
-<li>Objects size range in S3  is :  Min: 1 Byte , Max: 5TB</li>
-<li>S3 Number of buckets: 100</li>
-<li>Number of objects you can store: UNLIMITED</li>
-<li>Glacier retrieve time : 3 to 5 Hours</li>
-<li>RSS type durability is %99.99 instead Standard S3 which is %99.99999999999</li>
-<li>RDS size range : Min: 5GB , Max:3TB</li>
-<li>Aurora size range : Min: 10GB  Max: 64TB</li>
-<li>Aurora Availability : 2 Copies for each 3 Zone &ndash;> 6 Copies</li>
-<li>Elastic Block Storage (EBS) size , Min: 1GB  , Max: 1TB</li>
-<li>VPC per region Max : 5 (default - increased upon request)</li>
-<li>Internet Gateway per region : Max 5 (default - increased upon request)</li>
-<li>Customer Gateways per region : Max 50 (default - increased upon request)</li>
-<li>Elastic IP addresses per region: Max 5 (default - increased upon request)</li>
-<li>Rout tables per VPC : Max 200 (default - increased upon request)</li>
-<li>Internet Attached to a subnet at time : Only 1</li>
-<li>Security group per VPC : Max 100</li>
-<li>Rules per Security Group: Max 50</li>
-<li>VPN connections per region: Max 50</li>
-<li>General purpose SSD EBS availability: 99.999%</li>
-<li>General purpose SSD EBS IOPS per GB: 3 to 3000 ( just for short period)</li>
-<li>Simple Queue Service(SQS) Message Size : Max 256 Kb</li>
-<li>AWS CloudFormaton Limits : 20 stack</li>
+<li>fast and powerful</li>
+<li>fully managed service</li>
+<li>Peta byte scale</li>
+<li>Instead of storing data as a series of rows, it has columnar data storage</li>
+<li>Column-based storage require far fewer I/Os so greatly improving query performance</li>
+<li>10 Time Faster than traditional data warehouses.</li>
+<li>in column-base storage , similar data is stored sequentially , so data can be compressed much more than row-base storage,</li>
+<li>RedShift automatically samples your data and select the most appropriate compression schema.</li>
+<li>Redshift has MPP ( Massively Parallel Processing) feature.</li>
+<li>by MPP , data are distributed and queries load across all nodes to your data</li>
+<li>cost is less than a tenth of most other data warehouse solutions.</li>
+<li>configuration of RedShif can be Single node(160Gb) or Multi-node.</li>
+<li>in Multi-Node mode , One node is Leader node , and then you can create  up to 128 compute nodes.</li>
+<li>Leader node manages client connections and receives queries</li>
+<li>Computed Node store data and perform queries and do computations</li>
+<li>You will not charged for leader node hours; only compute nodes will incur charges.</li>
+<li>Encrypted in transit using SSL.</li>
+<li>Encrypted at rest using AES-256</li>
+<li>By default Redshift takes care of key management</li>
+<li>You can manage your own keys through HSM or by Amazon Key Management Service.</li>
+<li>Currently only available in 1 AZ</li>
+<li>Can restore snapshots to new AZ&rsquo;s in the event of outage.</li>
+<li>Fail over is not automatically , it&rsquo;s manual.</li>
 </ul>
 
 ]]></content>

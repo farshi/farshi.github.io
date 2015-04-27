@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Amazon Sns | FARSHI DESIGNS]]></title>
+  <link href="http://www.farshidesigns.com/blog/categories/amazon-sns/atom.xml" rel="self"/>
+  <link href="http://www.farshidesigns.com/"/>
+  <updated>2015-04-27T22:24:38+10:00</updated>
+  <id>http://www.farshidesigns.com/</id>
+  <author>
+    <name><![CDATA[Reza Farshi]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Amazon SNS Notes]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-sns-notes/"/>
+    <updated>2015-04-27T22:10:57+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-sns-notes</id>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon SMS service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+
+<p>Amazon Simple Notification service  (SNS) :</p>
+
+<pre><code>* Is a web service that makes it easy to set up, operate, and send notifications from the cloud.
+* Amazon SNS allows the "publish-subscribe" (pub-sub) messaging paradigm.
+* SNS eliminates the need to periodically check or pull for new information and updates.
+* it is inexpensive, pay-as-you-go model with no up-front costs.
+* Amazon SNS can be deliver notifications by SMS text messages or email, to Amazon Simple Queue Service (SQS) queues, or any HTTP endpoint.
+* To prevent messages from being lost,all messages published to Amazon SNS are stored redundantly across multiple availability zones.
+* SNS Topic allows you to group multiple recipients. It acts like a access point for allowing recipients to dynamically subscribe for identical copies of the same notification.
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
