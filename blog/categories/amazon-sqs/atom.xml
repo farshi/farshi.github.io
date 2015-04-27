@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Amazon Sqs | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/amazon-sqs/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-27T22:26:03+10:00</updated>
+  <updated>2015-04-27T22:38:42+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -22,21 +22,23 @@
 
 <p>Amazon Simple queue service (SQS):</p>
 
-<pre><code>    * is A web service that gives you access to a message queues.
-    * Queues can be used to store messages while waiting for a computer to process them.
-    * is distributed Queue System.
-    * is fast and reliable 
-    * A queue is a temporary repository for messages hat are waiting processing.
-    *By using SQS you can decouple the components of an application so they run independently.
-    * Messages can contain up to 256KB of text in any format.
-    * Messages can be retrieved by any distributed component by using Amazon SQS API.
-    * Amazon SQS ensures delivery of each message at least once. so one message can be read by many distributed application components simultaneously. And They are remained until you remove them from the queue yourself.
-    * SQS does not support FIFO ( First In Firs Out).
-    * SQS is a pull system , and messages are not pushed out like SNS.
-    * Visibility time out period for a message starts when a component retrieves the message. The default visibility time out is minimum 30 seconds and maximum 12 hours.
-    * SQS Billed at 64kb Chunks.
-    * Firs 1 million Amazon SQS request per month are free.
-</code></pre>
+<ul>
+<li>is A web service that gives you access to a message queues.</li>
+<li>Queues can be used to store messages while waiting for a computer to process them.</li>
+<li>is distributed Queue System.</li>
+<li>is fast and reliable</li>
+<li>A queue is a temporary repository for messages hat are waiting processing.
+*By using SQS you can decouple the components of an application so they run independently.</li>
+<li>Messages can contain up to 256KB of text in any format.</li>
+<li>Messages can be retrieved by any distributed component by using Amazon SQS API.</li>
+<li>Amazon SQS ensures delivery of each message at least once. so one message can be read by many distributed application components simultaneously. And They are remained until you remove them from the queue yourself.</li>
+<li>SQS does not support FIFO ( First In Firs Out).</li>
+<li>SQS is a pull system , and messages are not pushed out like SNS.</li>
+<li>Visibility time out period for a message starts when a component retrieves the message. The default visibility time out is minimum 30 seconds and maximum 12 hours.</li>
+<li>SQS Billed at 64kb Chunks.</li>
+<li>Firs 1 million Amazon SQS request per month are free.</li>
+</ul>
+
 ]]></content>
   </entry>
   

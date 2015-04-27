@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Amazon Swf | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/amazon-swf/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-27T22:26:03+10:00</updated>
+  <updated>2015-04-27T22:38:42+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -22,13 +22,15 @@
 
 <p>Amazon Simple Work flow Service (SWF):</p>
 
-<pre><code>* is a web service that makes it easy to coordinate work across distributed application components.
-* enables applications for a range of use cases, including media processing, web application back-ends, business process work flows, and analytics pipelines.
-* Tasks represent invocations of various processing steps in an application which can be performed by executable code, web service calls, human actions and scrips.
-* SWF presents a task-oriented API
-* SWF ensures that a task is assigned only once and is never duplicated.
-* SWF keeps track of all the tasks and events in an application.
-</code></pre>
+<ul>
+<li>is a web service that makes it easy to coordinate work across distributed application components.</li>
+<li>enables applications for a range of use cases, including media processing, web application back-ends, business process work flows, and analytics pipelines.</li>
+<li>Tasks represent invocations of various processing steps in an application which can be performed by executable code, web service calls, human actions and scrips.</li>
+<li>SWF presents a task-oriented API</li>
+<li>SWF ensures that a task is assigned only once and is never duplicated.</li>
+<li>SWF keeps track of all the tasks and events in an application.</li>
+</ul>
+
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-27T22:26:03+10:00</updated>
+  <updated>2015-04-27T22:38:42+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -44,13 +44,15 @@
 
 <p>Amazon Simple Work flow Service (SWF):</p>
 
-<pre><code>* is a web service that makes it easy to coordinate work across distributed application components.
-* enables applications for a range of use cases, including media processing, web application back-ends, business process work flows, and analytics pipelines.
-* Tasks represent invocations of various processing steps in an application which can be performed by executable code, web service calls, human actions and scrips.
-* SWF presents a task-oriented API
-* SWF ensures that a task is assigned only once and is never duplicated.
-* SWF keeps track of all the tasks and events in an application.
-</code></pre>
+<ul>
+<li>is a web service that makes it easy to coordinate work across distributed application components.</li>
+<li>enables applications for a range of use cases, including media processing, web application back-ends, business process work flows, and analytics pipelines.</li>
+<li>Tasks represent invocations of various processing steps in an application which can be performed by executable code, web service calls, human actions and scrips.</li>
+<li>SWF presents a task-oriented API</li>
+<li>SWF ensures that a task is assigned only once and is never duplicated.</li>
+<li>SWF keeps track of all the tasks and events in an application.</li>
+</ul>
+
 ]]></content>
   </entry>
   
@@ -63,26 +65,28 @@
 
 <p>Amazon Simple queue service (SQS):</p>
 
-<pre><code>    * is A web service that gives you access to a message queues.
-    * Queues can be used to store messages while waiting for a computer to process them.
-    * is distributed Queue System.
-    * is fast and reliable 
-    * A queue is a temporary repository for messages hat are waiting processing.
-    *By using SQS you can decouple the components of an application so they run independently.
-    * Messages can contain up to 256KB of text in any format.
-    * Messages can be retrieved by any distributed component by using Amazon SQS API.
-    * Amazon SQS ensures delivery of each message at least once. so one message can be read by many distributed application components simultaneously. And They are remained until you remove them from the queue yourself.
-    * SQS does not support FIFO ( First In Firs Out).
-    * SQS is a pull system , and messages are not pushed out like SNS.
-    * Visibility time out period for a message starts when a component retrieves the message. The default visibility time out is minimum 30 seconds and maximum 12 hours.
-    * SQS Billed at 64kb Chunks.
-    * Firs 1 million Amazon SQS request per month are free.
-</code></pre>
+<ul>
+<li>is A web service that gives you access to a message queues.</li>
+<li>Queues can be used to store messages while waiting for a computer to process them.</li>
+<li>is distributed Queue System.</li>
+<li>is fast and reliable</li>
+<li>A queue is a temporary repository for messages hat are waiting processing.
+*By using SQS you can decouple the components of an application so they run independently.</li>
+<li>Messages can contain up to 256KB of text in any format.</li>
+<li>Messages can be retrieved by any distributed component by using Amazon SQS API.</li>
+<li>Amazon SQS ensures delivery of each message at least once. so one message can be read by many distributed application components simultaneously. And They are remained until you remove them from the queue yourself.</li>
+<li>SQS does not support FIFO ( First In Firs Out).</li>
+<li>SQS is a pull system , and messages are not pushed out like SNS.</li>
+<li>Visibility time out period for a message starts when a component retrieves the message. The default visibility time out is minimum 30 seconds and maximum 12 hours.</li>
+<li>SQS Billed at 64kb Chunks.</li>
+<li>Firs 1 million Amazon SQS request per month are free.</li>
+</ul>
+
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Amazon VPC]]></title>
+    <title type="html"><![CDATA[Amazon VPC Notes]]></title>
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc/"/>
     <updated>2015-04-27T22:08:11+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc</id>
@@ -99,10 +103,14 @@
 <li>you can configure route tables</li>
 <li>you can setup network gateways ( Internet gateway and Customer gateway).</li>
 <li>With VPC you have two level of security groups:
-  1.instance security groups.
-  2.subnet network access control lists (ACLS)</li>
-<li>using Amazon Direct Connect you can connect your corporate data center and your AWS VPC.
-*There is a default VPC which is user friendly, allowing you to immediately deploy instances.</li>
+
+<ul>
+<li>  instance security groups.</li>
+<li>  subnet network access control lists (ACLS)</li>
+</ul>
+</li>
+<li>using Amazon Direct Connect you can connect your corporate data center and your AWS VPC.</li>
+<li>There is a default VPC which is user friendly, allowing you to immediately deploy instances.</li>
 <li>All Subnets in default VPC have an Internet gateway attached.</li>
 <li>Each EC2 instance has both a public and private IP address.</li>
 <li>If you delete the default CVPC the only way to get it back is to contact AWS.</li>
