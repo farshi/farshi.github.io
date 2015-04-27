@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Aws Architecture Certificate | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/aws-architecture-certificate/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-27T22:38:42+10:00</updated>
+  <updated>2015-04-27T22:51:31+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-sns-notes/"/>
     <updated>2015-04-27T22:10:57+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-sns-notes</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon SMS service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon SMS service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon Simple Notification service  (SNS) :</p>
 
@@ -40,7 +40,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-swf-notes/"/>
     <updated>2015-04-27T22:10:17+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-swf-notes</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon SWF service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon SWF service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon Simple Work flow Service (SWF):</p>
 
@@ -61,7 +61,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-sqs/"/>
     <updated>2015-04-27T22:09:04+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-sqs</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon SQS service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon SQS service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon Simple queue service (SQS):</p>
 
@@ -90,7 +90,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc/"/>
     <updated>2015-04-27T22:08:11+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon VPC service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon VPC service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon VPC:</p>
 
@@ -146,7 +146,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-redshift-notes/"/>
     <updated>2015-04-27T22:06:33+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-redshift-notes</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon RedShift service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about Amazon RedShift service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon RedShift is the Amazon warehouse service in cloud, characteristics are :</p>
 

@@ -9,7 +9,7 @@
   <meta name="author" content="Reza Farshi">
 
   
-  <meta name="description" content="Some Notes about Amazon SMS service , you will find it useful if you want to be prepare for AWS architecture certificate. Amazon Simple Notification &hellip;">
+  <meta name="description" content="Some Notes about Amazon S3 service , you will find it useful if you want to prepare for AWS architecture certificate. Amazon S3 : Files can be from 1 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +83,61 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2015/04/27/amazon-s3-notes/">Amazon S3 Notes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-04-27T22:48:19+10:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>10:48 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Some Notes about Amazon S3 service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
+
+<p>Amazon S3 :</p>
+
+<ul>
+<li>Files can be from 1 Byte to 5 TB</li>
+<li>Files are stored in Buckets and there is no limit.</li>
+<li>Buckets name must be unique in a region level</li>
+<li>Buckets are private by default</li>
+<li>S3 Files are stored as a object in buckets</li>
+<li>S3 supports MultiPart uploads,It is necessary for files bigger than 5Gb</li>
+<li>S3 support resumable uploads.</li>
+<li>S3 is consistent cross availability zones</li>
+<li>S3 has a Life Cycle management, you can archive data after a specific time period from upload time in glacier.</li>
+<li>Amazon S3 designed for 11 nines durability , 99.99999999999 in a given year</li>
+<li>Amazon S3 availability is 99.99% in a given  year</li>
+<li>Files can be encrypted on S3</li>
+<li>S3 has versioning feature , includes all writes even if you delete an object</li>
+<li>When you enable the versioning , you can not disable it , but you can suspend it</li>
+<li>Reduced Redundancy Storage (RSS) data availability and durability is 99.99%</li>
+<li>RSS is suitable for storing low frequency data.</li>
+<li>RSS Cost: 3 Cent per GB per Month</li>
+<li>Glacier is a low cost storage service suitable for data archiving.</li>
+<li>Glacier Cost: 1 Cent per GB per Month</li>
+<li>Glacier retrieval time 3 to 5 Hours</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2015/04/27/amazon-sns-notes/">Amazon SNS Notes</a></h1>
     
     
@@ -99,7 +154,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Some Notes about Amazon SMS service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+  <div class="entry-content"><p>Some Notes about Amazon SMS service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon Simple Notification service  (SNS) :</p>
 
@@ -141,7 +196,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Some Notes about Amazon SWF service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+  <div class="entry-content"><p>Some Notes about Amazon SWF service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon Simple Work flow Service (SWF):</p>
 
@@ -182,7 +237,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Some Notes about Amazon SQS service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+  <div class="entry-content"><p>Some Notes about Amazon SQS service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon Simple queue service (SQS):</p>
 
@@ -231,7 +286,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Some Notes about Amazon VPC service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+  <div class="entry-content"><p>Some Notes about Amazon VPC service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon VPC:</p>
 
@@ -307,7 +362,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Some Notes about Amazon RedShift service , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+  <div class="entry-content"><p>Some Notes about Amazon RedShift service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon RedShift is the Amazon warehouse service in cloud, characteristics are :</p>
 
@@ -365,7 +420,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Some Notes about Amazon DynamoDB service, you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+  <div class="entry-content"><p>Some Notes about Amazon DynamoDB service, you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <ul>
 <li>Amazon DynamoDb is a fast and flexible NoSQL database service.</li>
@@ -406,7 +461,7 @@
   </header>
 
 
-  <div class="entry-content"><p> Some Notes about Amazon RDS service, you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+  <div class="entry-content"><p> Some Notes about Amazon RDS service, you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <ul>
 <li>Amazon RDS now supports these Relational (OLTP): MySQL, Oracle , SQL , PostgreSql, Aurora</li>
@@ -460,7 +515,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Some Notes about Elastic compute cloud , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+  <div class="entry-content"><p>Some Notes about Elastic compute cloud , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <ul>
 <li>Elastic Compute Cloud provides re-sizable compute capacity in cloud.</li>
@@ -566,52 +621,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/04/16/sublime-text-as-a-default-editor-for-git-and-others/">Sublime Text as a Default Editor for Git and Others</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-04-16T13:37:09+10:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:37 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you want to set sublime as the main editor for git and other programs on your mac, depends on what you bash you use you should edit  ~/.bash_profile or ~/.bashrc or ~/.zshrc and put these lines on it:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>export VISUAL='subl -w'
-</span><span class='line'>export EDITOR="$VISUAL"
-</span><span class='line'>export GIT_EDITOR="$VISUAL"
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then open a new terminal and run this command :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl</span></code></pre></td></tr></table></div></figure>
-
-
-<p> Now sublime can be run as a console program and when you hit <code>git commit</code> command sublime shows up in a new Tab. Refer to <a href="https://www.sublimetext.com/docs/2/osx_command_line.html">Sublime documentation</a>.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/2">&larr; Older</a>
@@ -627,6 +636,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/04/27/amazon-s3-notes/">Amazon S3 Notes</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/04/27/amazon-sns-notes/">Amazon SNS Notes</a>
       </li>
     
@@ -640,10 +653,6 @@
     
       <li class="post">
         <a href="/blog/2015/04/27/amazon-vpc/">Amazon VPC Notes</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/04/27/amazon-redshift-notes/">Amazon RedShift Notes</a>
       </li>
     
   </ul>

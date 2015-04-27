@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Iam | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/iam/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-27T22:38:42+10:00</updated>
+  <updated>2015-04-27T22:51:31+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials/"/>
     <updated>2015-04-25T12:27:57+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials</id>
-    <content type="html"><![CDATA[<p>Some Notes about Elastic compute cloud , you will find it useful if you want to be prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about Elastic compute cloud , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <ul>
 <li>Elastic Compute Cloud provides re-sizable compute capacity in cloud.</li>
