@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Amazon | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/amazon/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-28T20:34:31+10:00</updated>
+  <updated>2015-04-28T20:36:20+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/24/amazon-aws-numbers-and-default-limits-facts/"/>
     <updated>2015-04-24T16:01:40+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/24/amazon-aws-numbers-and-default-limits-facts</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve collected some information about default limits in AWS and other numerical facts from <a href="http://aws.amazon.com/">Amazon AWS official website</a>. May be you find it useful if you want to prepare for AWS architecture certification. This post my be updated in the future.</p>
+    <content type="html"><![CDATA[<p>I&rsquo;ve collected some information about default limits in AWS and other numerical facts from <a href="http://aws.amazon.com/">Amazon AWS official website</a>. May be you find it useful if you want to prepare for AWS architecture certification exam. This post my be updated in the future.</p>
 
 <ul>
 <li>AWS is available in : 190 countries</li>
