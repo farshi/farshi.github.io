@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Amazon Rds | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/amazon-rds/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-28T15:22:36+10:00</updated>
+  <updated>2015-04-28T20:01:56+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -44,7 +44,12 @@
 <li>Read replicas are available in Amazon RDS for MySQL, PostgreSQL, and Amazon Aurora.</li>
 <li>Amazon RDS for MySQL and PostgreSQL allow you to add up to 5 read replicas to each DB Instance.</li>
 <li>With Aurora you will get 6 copies of your data (2 copies in each 3 AZ).</li>
+<li>Replication is only supported for the InnoDB storage engine.</li>
 <li>When you provision a Multi-AZ DB Instance, Amazon RDS automatically creates a primary DB Instance and synchronously replicates the data to a standby instance in a different Availability Zone (AZ)</li>
+<li>you can monitor you Read Replica using CloudWatch Replica Lag statistic. If a replica lags too far behind for your environment, consider deleting and recreating the Read Replica</li>
+<li>If you scale the source DB instance, you should also scale the Read Replicas.
+<em>you can create ReadReplica1 from MyDBInstance, and then create ReadReplica2 from ReadReplica1.
+</em>Before a DB instance can serve as a source DB instance, you must enable automatic backups on the source DB instance by setting the backup retention period to a value other than 0.</li>
 </ul>
 
 ]]></content>
