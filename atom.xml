@@ -4,7 +4,7 @@
   <title><![CDATA[FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-28T20:01:56+10:00</updated>
+  <updated>2015-04-28T20:28:30+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-s3-notes/"/>
     <updated>2015-04-27T22:48:19+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-s3-notes</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon Simple Storage Service (S3) service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about the Amazon Simple Storage Service (S3) service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon Simple Storage Service (S3) :</p>
 
@@ -53,7 +53,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-sns-notes/"/>
     <updated>2015-04-27T22:10:57+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-sns-notes</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon SMS service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about the Amazon SMS service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon Simple Notification service  (SNS) :</p>
 
@@ -75,7 +75,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-swf-notes/"/>
     <updated>2015-04-27T22:10:17+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-swf-notes</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon SWF service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about the Amazon SWF service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon Simple Work flow Service (SWF):</p>
 
@@ -96,7 +96,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-sqs/"/>
     <updated>2015-04-27T22:09:04+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-sqs</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon SQS service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about the Amazon SQS service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon Simple queue service (SQS):</p>
 
@@ -181,7 +181,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-redshift-notes/"/>
     <updated>2015-04-27T22:06:33+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-redshift-notes</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon RedShift service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about the Amazon RedShift service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon RedShift is the Amazon warehouse service in cloud, characteristics are :</p>
 
@@ -219,7 +219,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-dynamodb-notes/"/>
     <updated>2015-04-27T22:05:47+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-dynamodb-notes</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon DynamoDB service, you will find it useful if you want to prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about the Amazon DynamoDB service, you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <ul>
 <li>Amazon DynamoDb is a fast and flexible NoSQL database service.</li>
@@ -241,7 +241,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-rds-notes/"/>
     <updated>2015-04-27T22:04:28+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-rds-notes</id>
-    <content type="html"><![CDATA[<p> Some Notes about Amazon RDS service, you will find it useful if you want to prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p> Some Notes about the Amazon RDS service, you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <ul>
 <li>Amazon RDS now supports these Relational (OLTP): MySQL, Oracle , SQL , PostgreSql, Aurora</li>
@@ -283,7 +283,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials/"/>
     <updated>2015-04-25T12:27:57+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/25/ec2-essentials</id>
-    <content type="html"><![CDATA[<p>Some Notes about Elastic compute cloud , you will find it useful if you want to prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about the Elastic compute cloud , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <ul>
 <li>Elastic Compute Cloud provides re-sizable compute capacity in cloud.</li>

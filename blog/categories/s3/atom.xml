@@ -4,7 +4,7 @@
   <title><![CDATA[Category: S3 | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/s3/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-28T20:01:56+10:00</updated>
+  <updated>2015-04-28T20:28:30+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-s3-notes/"/>
     <updated>2015-04-27T22:48:19+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-s3-notes</id>
-    <content type="html"><![CDATA[<p>Some Notes about Amazon Simple Storage Service (S3) service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about the Amazon Simple Storage Service (S3) service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon Simple Storage Service (S3) :</p>
 
