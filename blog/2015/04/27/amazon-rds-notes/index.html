@@ -108,18 +108,21 @@
 <li>Aurora cost is one tenth that of a commercial database while delivering similar performance and availability.</li>
 <li>Aurora start with 10Gb, Scales in 10 Gb increments to 64Tb.</li>
 <li>compute resources can scale up to 32vCPUs and 244 Gb of Memory.</li>
-<li>with Aurora you will get 6 copies of your data (2 copies in each 3 AZ).</li>
 <li>Aurora storage is self-healing. Data blocks scanned and fixed automatically.</li>
 <li>you can loose 2 copies without effecting write performance.</li>
 <li>you can loose 3 copies without effecting read performance.</li>
 <li>Maximum Backup Retention Period for RDS is 35 days</li>
 <li>When you want restore database to specific time , entirely new database will be created and endpoints will be different from the original database endpoint</li>
-<li>you can bring your own license in the case of selecting Oracle Database as a RDS Engine.</li>
+<li>you can bring your own license in the case of selecting Oracle and SQL Server as a RDS Engine.</li>
 <li>You can modify MySql DB instance and increase storage size , change engine , change database name , password and &hellip;</li>
-<li><p>Microsoft SQL server DB instance has some restrictions:</p></li>
-<li><p> You can not modify Microsoft SQL server DB instance storage size , Amazon does not support increasing storage on a SQL server DB Instance.</p></li>
+<li>Microsoft SQL server DB instance has some restrictions:</li>
+<li> You can not modify Microsoft SQL server DB instance storage size , Amazon does not support increasing storage on a SQL server DB Instance.</li>
 <li> A newly created SQL server does not contain database. you should connect from SQL server management studio and create your database.</li>
 <li>The maximum storage size for SQL server DB instance is 1024 GB.</li>
+<li>Read replicas are available in Amazon RDS for MySQL, PostgreSQL, and Amazon Aurora.</li>
+<li>Amazon RDS for MySQL and PostgreSQL allow you to add up to 5 read replicas to each DB Instance.</li>
+<li>With Aurora you will get 6 copies of your data (2 copies in each 3 AZ).</li>
+<li>When you provision a Multi-AZ DB Instance, Amazon RDS automatically creates a primary DB Instance and synchronously replicates the data to a standby instance in a different Availability Zone (AZ)</li>
 </ul>
 
 </div>
