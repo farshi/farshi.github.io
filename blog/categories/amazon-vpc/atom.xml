@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Amazon Vpc | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/amazon-vpc/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-28T20:28:30+10:00</updated>
+  <updated>2015-04-28T20:32:24+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc/"/>
     <updated>2015-04-27T22:08:11+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-vpc</id>
-    <content type="html"><![CDATA[<p>Some Notes about the Amazon VPC service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about the Amazon VPC service. You will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon VPC:</p>
 

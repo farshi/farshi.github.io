@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Amazon Dynamodb | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/amazon-dynamodb/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-28T20:28:30+10:00</updated>
+  <updated>2015-04-28T20:32:24+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-dynamodb-notes/"/>
     <updated>2015-04-27T22:05:47+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-dynamodb-notes</id>
-    <content type="html"><![CDATA[<p>Some Notes about the Amazon DynamoDB service, you will find it useful if you want to prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about the Amazon DynamoDB service. You will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <ul>
 <li>Amazon DynamoDb is a fast and flexible NoSQL database service.</li>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Amazon Swf | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/amazon-swf/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-28T20:28:30+10:00</updated>
+  <updated>2015-04-28T20:32:24+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.farshidesigns.com/blog/2015/04/27/amazon-swf-notes/"/>
     <updated>2015-04-27T22:10:17+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/04/27/amazon-swf-notes</id>
-    <content type="html"><![CDATA[<p>Some Notes about the Amazon SWF service , you will find it useful if you want to prepare for AWS architecture certificate.</p>
+    <content type="html"><![CDATA[<p>Some Notes about the Amazon SWF service. You will find it useful if you want to prepare for AWS architecture certificate.</p>
 
 <p>Amazon Simple Work flow Service (SWF):</p>
 
