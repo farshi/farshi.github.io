@@ -6,7 +6,7 @@ comments: true
 categories: [EC2 , AWS Architecture Certificate , Lambda ,IAM,Placement Group]
 ---
 
-Some Notes about Elastic compute cloud , you will find it useful if you want to prepare for AWS architecture certificate.
+Some Notes about the Elastic compute cloud , you will find it useful if you want to prepare for AWS architecture certificate exam.
 
 * Elastic Compute Cloud provides re-sizable compute capacity in cloud.
 * It can be scale up or down as computing requirements changed.
@@ -33,4 +33,5 @@ Some Notes about Elastic compute cloud , you will find it useful if you want to 
 * Supported programming language for lambda is JavaScript.
 * Lambda designed to be available in 99.99%
 * First one million request of Lambda are free and there after is 0.20 per 1 mil request
-
+* Copying snapshots that were encrypted with non-default AWS Key Management Service master keys is not supported at this time.
+*  Snapshots are sent/stored on Amazon S3

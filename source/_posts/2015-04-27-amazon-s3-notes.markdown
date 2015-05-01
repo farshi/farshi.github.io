@@ -5,7 +5,7 @@ date: 2015-04-27 22:48:19 +1000
 comments: true
 categories: [Amazon Simple Storage Service ,S3, AWS Architecture Certificate ]
 ---
-Some Notes about Amazon Simple Storage Service (S3) service , you will find it useful if you want to prepare for AWS architecture certificate.
+Some Notes about the Amazon Simple Storage Service (S3) service. You will find it useful if you want to prepare for AWS architecture certificate exam.
 
 Amazon Simple Storage Service (S3) :
 

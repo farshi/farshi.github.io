@@ -6,7 +6,7 @@ comments: true
 categories: [Amazon SQS , AWS Architecture Certificate]
 ---
  
-Some Notes about Amazon SQS service , you will find it useful if you want to prepare for AWS architecture certificate.
+Some Notes about the Amazon SQS service. You will find it useful if you want to prepare for AWS architecture certificate exam.
 
 Amazon Simple queue service (SQS):
 

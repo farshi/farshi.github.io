@@ -5,7 +5,7 @@ date: 2015-04-27 22:10:57 +1000
 comments: true
 categories: [Amazon SNS , AWS Architecture Certificate]
 ---
-Some Notes about Amazon SMS service , you will find it useful if you want to prepare for AWS architecture certificate.
+Some Notes about the Amazon SMS service. You will find it useful if you want to prepare for AWS architecture certificate exam.
 
 Amazon Simple Notification service  (SNS) :
 

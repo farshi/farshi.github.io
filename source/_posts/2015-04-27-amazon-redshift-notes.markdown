@@ -5,7 +5,7 @@ date: 2015-04-27 22:06:33 +1000
 comments: true
 categories: [Amazon RedShift, AWS Architecture Certificate]  
 ---
-Some Notes about Amazon RedShift service , you will find it useful if you want to prepare for AWS architecture certificate.
+Some Notes about the Amazon RedShift service. You will find it useful if you want to prepare for AWS architecture certificate exam.
 
 Amazon RedShift is the Amazon warehouse service in cloud, characteristics are :
 

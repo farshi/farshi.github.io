@@ -5,7 +5,7 @@ date: 2015-04-27 22:05:47 +1000
 comments: true
 categories: [Amazon DynamoDB, AWS Architecture Certificate]  
 ---
-Some Notes about Amazon DynamoDB service, you will find it useful if you want to prepare for AWS architecture certificate.
+Some Notes about the Amazon DynamoDB service. You will find it useful if you want to prepare for AWS architecture certificate exam.
 
 * Amazon DynamoDb is a fast and flexible NoSQL database service.
 * single digit millisecond latency at any scale
@@ -15,3 +15,5 @@ Some Notes about Amazon DynamoDB service, you will find it useful if you want to
 * Stored on SSD storage
 * spread across 3 geographically distinct data centres
 * It supports both of Eventual Consistency and Strong Consistency.
+* Integrated with RedShift and Elastic Map Reduce (EMR)
+

@@ -5,25 +5,25 @@ date: 2015-04-27 22:08:11 +1000
 comments: true
 categories: [Amazon VPC , AWS Architecture Certificate]
 ---
-Some Notes about Amazon VPC service , you will find it useful if you want to prepare for AWS architecture certificate.
+Some Notes about the Amazon VPC service. You will find it useful if you want to prepare for AWS architecture certificate exam.
 
 Amazon VPC:
 
 * It is like a virtual data center in cloud.
 * lets you provision a logically isolated sections of the Amazon web service (AWS) cloud.
 * you have complete control over your virtual network environment.
-* you can select your own IP address range
-* you can crate your subnets
-* you can configure route tables 
+* you can select your own IP address range.
+* you can create your subnets.
+* you can configure route tables. 
 * you can setup network gateways ( Internet gateway and Customer gateway).
-* With VPC you have two level of security groups: 
+* With VPC you have two level of security: 
   	-	instance security groups.
   	-	subnet network access control lists (ACLS)
-* using Amazon Direct Connect you can connect your corporate data center and your AWS VPC.
+* Using Amazon Direct Connect you can connect your corporate data center and your AWS VPC.
 * There is a default VPC which is user friendly, allowing you to immediately deploy instances.
 * All Subnets in default VPC have an Internet gateway attached.
-* Each EC2 instance has both a public and private IP address.
-* If you delete the default CVPC the only way to get it back is to contact AWS.
+* Each EC2 instance has both a public and private IP addresses.
+* If you delete the default VPC the only way to get it back is to contact AWS.
 * you can user VPC Peering to connect one VPC with another.
 * when you use VPC Peering , instances behave as if they were on the same private network.
 * you can peer even VPC's with other AWS accounts.

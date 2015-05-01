@@ -5,7 +5,7 @@ date: 2015-04-24 16:01:40 +1000
 comments: true
 categories: [Amazon , AWS , S3 , AWS Architecture Certificate]  
 ---
-I've collected some information about default limits in AWS and other numerical facts from [Amazon AWS official website](http://aws.amazon.com/). May be you find it useful if you want to prepare for AWS architecture certification. This post my be updated in the future.
+I've collected some information about default limits in AWS and other numerical facts from [Amazon AWS official website](http://aws.amazon.com/). May be you find it useful if you want to prepare for AWS architecture certification exam. This post my be updated in the future.
 
 * AWS is available in : 190 countries
 * Number of available regions: 11

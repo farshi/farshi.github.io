@@ -5,7 +5,7 @@ date: 2015-04-27 22:10:17 +1000
 comments: true
 categories: [Amazon SWF, AWS Architecture Certificate]
 ---
-Some Notes about Amazon SWF service , you will find it useful if you want to prepare for AWS architecture certificate.
+Some Notes about the Amazon SWF service. You will find it useful if you want to prepare for AWS architecture certificate exam.
 
 Amazon Simple Work flow Service (SWF):
 
