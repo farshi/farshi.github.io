@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.farshidesigns.com/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli/</loc>
+    <lastmod>2015-05-14T23:03:10+10:00</lastmod>
+  </url>
+  <url>
     <loc>http://www.farshidesigns.com/blog/2015/04/27/amazon-s3-notes/</loc>
     <lastmod>2015-04-27T22:48:19+10:00</lastmod>
   </url>
@@ -129,6 +133,21 @@
   </url>
   <url>
     <loc>http://www.farshidesigns.com/blog/categories/amazon-simple-storage-service/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/categories/aws-ecs/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/categories/docker-container/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/categories/ami/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/categories/task-definition/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/blog/categories/ecs-optimized-iam/</loc>
   </url>
   <url>
     <loc>http://www.farshidesigns.com/posts/2/</loc>

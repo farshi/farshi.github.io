@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Setup a AWS ECS Container Purely Using CLI - FARSHI DESIGNS</title>
+  <meta name="author" content="Reza Farshi">
+
+  
+  <meta name="description" content="In This Blog post I’m trying to setup an ECS container in a custom cluster with one docker instance inside by using AWS CLI. The AWS user guides &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.farshidesigns.com/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="FARSHI DESIGNS" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-61874438-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">FARSHI DESIGNS</a></h1>
+  
+    <h2>My thoughts on Software Architecture, Cloud Implementation , DevOps, Agile, Technology, Life and my favorite sport Paragliding.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="www.farshidesigns.com">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Setup a AWS ECS Container Purely Using CLI</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-05-14T23:03:10+10:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>14</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>11:03 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>In This Blog post I’m trying to setup an ECS container in a custom cluster with one docker instance inside by using AWS CLI. The AWS user guides partially describes how to setup an EC2 Container service using the AWS CLI but in some steps It leaves some tricks to the reader, for example user have to login to AWS console to setup EC2 machine needed to act as an ECS machine or in one of the steps you have to login and create needed an IAM role and required policies to assign to the EC2 machine. We need to assign appropriate role to the Ec2 Machine to letting it to communicate with ECS service to register and deregister the Ec2 Machine as a resource.</p>
+
+<p>In this post I walk through you to setup everything purely by AWS CLI commands from start to finish. It includes:</p>
+
+<ul>
+<li>Configuring AWS CLI environment on the user machine.</li>
+<li>Creating key pair which is need to connect to the EC2 machine.</li>
+<li>Creating the instance of EC2 machine.</li>
+<li>Creating the required IAM role and in-line attached policies to assign to the EC2.</li>
+<li>Configuring EC2 machine to be assigned to custom cluster instead of default one.</li>
+</ul>
+
+
+<p>This guide includes other steps which already have been described by AWS user guide itself and I did not add new stuffs to those steps but I reproduce that commands too. These steps are  Including task definition and ruining the task.</p>
+
+<p>Let’s get started with configuring the AWS CLI environment on your machine.</p>
+
+<h2>Step 1 - configure keys</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws configure
+</span><span class='line'>AWS Access Key ID []:****************6HEQ
+</span><span class='line'>AWS Secret Access Key []:****************mFbV
+</span><span class='line'>Default region name []: ap-southeast-2
+</span><span class='line'>Default output format []:Json</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I choose ap-southeast-2 , coz I am using Sydney region.</p>
+
+<h2>Step 2: Create a Cluster</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs create-cluster --cluster-name MyCluster
+</span><span class='line'>{
+</span><span class='line'>    "cluster": {
+</span><span class='line'>        "status": "ACTIVE",
+</span><span class='line'>        "clusterName": "MyCluster",
+</span><span class='line'>        "registeredContainerInstancesCount": 0,
+</span><span class='line'>        "pendingTasksCount": 0,
+</span><span class='line'>        "runningTasksCount": 0,
+</span><span class='line'>        "clusterArn": "arn:aws:ecs:ap-southeast-2:338764315603:cluster/MyCluster"
+</span><span class='line'>    }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This Step is optional, If you don&rsquo;t create a cluster containers will be created on the default cluster.</p>
+
+<h2>Step 3: Launch an Instance with the Amazon ECS AMI</h2>
+
+<p>This step includes some sub steps.</p>
+
+<h3>Step 3-1 : Creating a Key Pair</h3>
+
+<p>To create a key pair named MyKeyPair, use the create-key-pair command, and use the <code>--query</code> option and the <code>--output</code> text option to pipe your private key directly into a file.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text &gt; MyKeyPair.pem
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you&rsquo;re using an SSH client on a Linux computer to connect to your instance, use the following command to set the permissions of your private key file so that only you can read it.</p>
+
+<p><code> ~/ chmod 400 MyKeyPair.pem</code></p>
+
+<p>To displaying Your Key Pair to verify you have done the key pair creation.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ec2 describe-key-pairs --key-name MyKeyPair
+</span><span class='line'>{
+</span><span class='line'>    "KeyPairs": [
+</span><span class='line'>        {
+</span><span class='line'>            "KeyName": "MyKeyPair",
+</span><span class='line'>            "KeyFingerprint": "df:6a:55:cc:66:4f:2e:a3:8b:ca:67:16:be:b9:f5:4a:db:5a:26:1a"
+</span><span class='line'>        }
+</span><span class='line'>    ]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 3-2 : Creating a Security Group</h3>
+
+<p>Containers associated with your tasks can map their network ports to ports on the host Amazon ECS container instance so they are reachable from the Internet. If your container has external connectivity, then your container instance security group must allow inbound access to the ports you want to expose.</p>
+
+<p>Here we don’t want to have a docker instance to communicate with outside but I open the port 22 coz later we might want to login into the machine and inspect AWS ecs-agent and our created docker instance. AWS ecs-agent is a docket instance by itself. In the real production environment it’s not a good practice to open ssh port on the ECS machine but if you wan to do it you should choose restricted CIDR instead of 0.0.0.0/0.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ec2 create-security-group --group-name MySecurityGroup --description "My security group”
+</span><span class='line'> ~/ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 22 --cidr 0.0.0.0/0
+</span><span class='line'> ~/  aws ec2 describe-security-groups --group-names MySecurityGroup</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 3-3: Creating userdata.txt to specify ClusterName</h3>
+
+<p>By default, your container instance launches into your default cluster. If you want to launch into your own cluster instead of the default, replacing &lsquo;your_cluster_name&rsquo; with the name of your cluster.</p>
+
+<p><code>#!/bin/bash
+echo ECS_CLUSTER=your_cluster_name &gt;&gt; /etc/ecs/ecs.config</code></p>
+
+<p>Create a file <code>userdata.txt</code> and paste these lines into it:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/bash 
+</span><span class='line'>echo ECS_CLUSTER=MyCluster &gt;&gt; /etc/ecs/ecs.config</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 3-4 : Creating required instance profile, role and policy</h3>
+
+<p>In this step we want to create the required role with inline policy and assign the role to the instance profile. Because the Amazon ECS container agent makes calls to Amazon ECS on your behalf, you need to launch container instances with an IAM role that authenticates to your account and provides the required resource permissions.</p>
+
+<p>Create a new file <code>ecsPolicy.json</code> using nano or vim and put following lines into the file:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{
+</span><span class='line'>  "Version": "2012-10-17",
+</span><span class='line'>  "Statement": [
+</span><span class='line'>    {
+</span><span class='line'>      "Sid": "",
+</span><span class='line'>      "Effect": "Allow",
+</span><span class='line'>      "Principal": {
+</span><span class='line'>        "Service": "ec2.amazonaws.com"
+</span><span class='line'>      },
+</span><span class='line'>      "Action": "sts:AssumeRole"
+</span><span class='line'>    }
+</span><span class='line'>  ]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create a new file <code>rolePolicy.json</code> and put the following lines into the file:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> {
+</span><span class='line'>  "Version": "2012-10-17",
+</span><span class='line'>  "Statement": [
+</span><span class='line'>    {
+</span><span class='line'>      "Effect": "Allow",
+</span><span class='line'>      "Action": [
+</span><span class='line'>        "ecs:CreateCluster",
+</span><span class='line'>        "ecs:DeregisterContainerInstance",
+</span><span class='line'>        "ecs:DiscoverPollEndpoint",
+</span><span class='line'>        "ecs:Poll",
+</span><span class='line'>        "ecs:RegisterContainerInstance",
+</span><span class='line'>        "ecs:Submit*"
+</span><span class='line'>      ],
+</span><span class='line'>      "Resource": [
+</span><span class='line'>        "*"
+</span><span class='line'>      ]
+</span><span class='line'>    }
+</span><span class='line'>  ]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And then issue these set of commands:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/.aws/ aws iam create-role --role-name ecsRole --assume-role-policy-document file://ecsPolicy.json
+</span><span class='line'>
+</span><span class='line'> ~/.aws/ aws iam put-role-policy --role-name ecsRole --policy-name ecsRolePolicy  --policy-document file://rolePolicy.json
+</span><span class='line'>
+</span><span class='line'> ~/.aws/ aws iam add-role-to-instance-profile --instance-profile-name ecsRole  --role-name ecsRole</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 3-5 : Running EC2 instance on a default VPC</h3>
+
+<p>The Amazon ECS container agent allows container instances to connect to your cluster. The Amazon ECS container agent is included in the Amazon ECS-optimized AMI, but you can also install it on any EC2 instance that supports the Amazon ECS specification. The Amazon ECS container agent is only supported on EC2 instances.</p>
+
+<p>For finding an AMI which is ECS optimized login into the AWS console then from the console dashboard, choose Launch Instance. On the Choose an Amazon Machine Image (AMI) page, choose Community AMIs. Choose an AMI for your container instance.  you can replace image-id options by  the image-id you find.</p>
+
+<p>I choose this AMI :
+<code>amzn-ami-2015.03.b-amazon-ecs-optimized - ami-39017e03</code></p>
+
+<p>So now we can pass security group and IAM instance profile that we created in previous steps.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ec2 run-instances   --image-id ami-39017e03 --count 1 --instance-type t2.micro --key-name MyKeyPair --iam-instance-profile "Name= ecsRole" --security-groups MySecurityGroup --user-data file://userdata.txt</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 3-6: Adding a Name Tag to Your Instance</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ec2 create-tags --resources i-fcb33a20 --tags Key=Name,Value=MyECSInstance</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 4:  List Container Instances</h2>
+
+<p>by issuing this command you can see the container instances list. Because we configure ace-agent to be deployed in MyCluster, for listing
+the container instance it needs cluster be specified.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs list-container-instances --cluster MyCluster
+</span><span class='line'>{
+</span><span class='line'>    "containerInstanceArns": [
+</span><span class='line'>        "arn:aws:ecs:ap-southeast-2:338764315603:container-instance/3de53ed6-5017-46fa-9b9f-37ad8a2b9da6"
+</span><span class='line'>    ]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 5: Describe your Container Instance</h2>
+
+<p>To list the details of containers in our cluster we can use following commands. The details of containers , amount of CPU , memory capacity and also network ports will be shown.  Container-instances which listed for you by the previous command should be passed to this command.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aaws ecs describe-container-instances --cluster MyCluster --container-instances 3de53ed6-5017-46fa-9b9f-37ad8a2b9da6</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 6: Register a Task Definition</h2>
+
+<p>For defining the task we need to create a JSON file and specify the amount of memory , number of CPU units, the name of the task , the container image we want to use , and the type of the container.</p>
+
+<p><code>~/ nano sleep360.json</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{
+</span><span class='line'>  "containerDefinitions": [
+</span><span class='line'>    {
+</span><span class='line'>      "name": "sleep",
+</span><span class='line'>      "image": "busybox",
+</span><span class='line'>      "cpu": 10,
+</span><span class='line'>      "command": [
+</span><span class='line'>        "sleep",
+</span><span class='line'>        "360"
+</span><span class='line'>      ],
+</span><span class='line'>      "memory": 10,
+</span><span class='line'>      "essential": true
+</span><span class='line'>    }
+</span><span class='line'>  ],
+</span><span class='line'>  "family": "sleep360"
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here our defined task is essential and it means the cluster will be died if this container dies. our task is a simple task which wants to run a bash command  &lsquo;sleep 360&rsquo;  and the container will be terminated after running the command. exactly after 6 minutes. :D</p>
+
+<p>by issuing the following command and passing the created file to the command we be able to register our task definition.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs register-task-definition --cli-input-json file://sleep360.json
+</span><span class='line'>{
+</span><span class='line'>    "taskDefinition": {
+</span><span class='line'>        "volumes": [],
+</span><span class='line'>        "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:338764315603:task-definition/sleep360:1",
+</span><span class='line'>        "containerDefinitions": [
+</span><span class='line'>            {
+</span><span class='line'>                "environment": [],
+</span><span class='line'>                "name": "sleep",
+</span><span class='line'>                "mountPoints": [],
+</span><span class='line'>                "image": "busybox",
+</span><span class='line'>                "cpu": 10,
+</span><span class='line'>                "portMappings": [],
+</span><span class='line'>                "command": [
+</span><span class='line'>                    "sleep",
+</span><span class='line'>                    "360"
+</span><span class='line'>                ],
+</span><span class='line'>                "memory": 10,
+</span><span class='line'>                "essential": true,
+</span><span class='line'>                "volumesFrom": []
+</span><span class='line'>            }
+</span><span class='line'>        ],
+</span><span class='line'>        "family": "sleep360",
+</span><span class='line'>        "revision": 1
+</span><span class='line'>    }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To be sure that our task is registered, issuing this command will list the defined tasks.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/  aws ecs list-task-definitions
+</span><span class='line'>{
+</span><span class='line'>    "taskDefinitionArns": [
+</span><span class='line'>        "arn:aws:ecs:ap-southeast-2:338764315603:task-definition/sleep360:1"
+</span><span class='line'>    ]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 7: Run a Task</h2>
+
+<p>To running a task simple use this command. By passing the count argument we can specify how many instance of container spin up on the cluster.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs run-task --cluster MyCluster --task-definition sleep360:1 --count 1</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To listing the task use the following command.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs list-tasks --cluster MyCluster
+</span><span class='line'>{
+</span><span class='line'>    "taskArns": [
+</span><span class='line'>        "arn:aws:ecs:ap-southeast-2:338764315603:task/7cceb4d5-8950-42a3-923e-b1859d401399"
+</span><span class='line'>    ]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>By passing the task ARN (listed above) to the following command we can see details of the running task.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs describe-tasks --cluster MyCluster --task 7cceb4d5-8950-42a3-923e-b1859d401399
+</span><span class='line'>{
+</span><span class='line'>    "failures": [],
+</span><span class='line'>    "tasks": [
+</span><span class='line'>        {
+</span><span class='line'>            "taskArn": "arn:aws:ecs:ap-southeast-2:338764315603:task/7cceb4d5-8950-42a3-923e-b1859d401399",
+</span><span class='line'>            "overrides": {
+</span><span class='line'>                "containerOverrides": [
+</span><span class='line'>                    {
+</span><span class='line'>                        "name": "sleep"
+</span><span class='line'>                    }
+</span><span class='line'>                ]
+</span><span class='line'>            },
+</span><span class='line'>            "lastStatus": "RUNNING",
+</span><span class='line'>            "containerInstanceArn": "arn:aws:ecs:ap-southeast-2:338764315603:container-instance/3de53ed6-5017-46fa-9b9f-37ad8a2b9da6",
+</span><span class='line'>            "clusterArn": "arn:aws:ecs:ap-southeast-2:338764315603:cluster/MyCluster",
+</span><span class='line'>            "desiredStatus": "RUNNING",
+</span><span class='line'>            "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:338764315603:task-definition/sleep360:1",
+</span><span class='line'>            "containers": [
+</span><span class='line'>                {
+</span><span class='line'>                    "containerArn": "arn:aws:ecs:ap-southeast-2:338764315603:container/d440587d-b23b-45f3-a2a8-ff8b195d0240",
+</span><span class='line'>                    "taskArn": "arn:aws:ecs:ap-southeast-2:338764315603:task/7cceb4d5-8950-42a3-923e-b1859d401399",
+</span><span class='line'>                    "name": "sleep",
+</span><span class='line'>                    "networkBindings": [],
+</span><span class='line'>                    "lastStatus": "RUNNING",
+</span><span class='line'>                    "exitCode": 0
+</span><span class='line'>                }
+</span><span class='line'>            ]
+</span><span class='line'>        }
+</span><span class='line'>    ]
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 8 (Final): SSH into the EC2 machine an list the  container</h2>
+
+<p>In the final step  we want to ssh into the machine and list the containers inside the machine.</p>
+
+<p>ssh -i MyKeyPair.pem ec2-user@EC2-Public-IP-ADDRESS</p>
+
+<p>after login into the machine, you can issue  <code>packer -ps</code>  command to list the containers. you should see the  <code>ecs-agent</code> and  <code>sleep 360</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[ec2-user@ip-xxx-xxx-xxx-xx ~]$ docker ps
+</span><span class='line'>CONTAINER ID        IMAGE                            COMMAND             CREATED             STATUS                  PORTS                        NAMES
+</span><span class='line'>95d32fb0a1a2        busybox:latest                   "sleep 360"         1 seconds ago       Up Less than a second                                ecs-sleep360-1-sleep-fec1a8f1fbfd9d82d601
+</span><span class='line'>0ad94851d185        amazon/amazon-ecs-agent:latest   "/agent"            11 minutes ago      Up 11 minutes           127.0.0.1:51678-&gt;51678/tcp   ecs-agent
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Hope you enjoy this blog post and helps you to understand the ECS service more.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Reza Farshi</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-05-14T23:03:10+10:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>14</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>11:03 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ami/'>ami</a>, <a class='category' href='/blog/categories/aws-ecs/'>aws ecs</a>, <a class='category' href='/blog/categories/docker-container/'>docker container</a>, <a class='category' href='/blog/categories/ecs-optimized-iam/'>ecs optimized iam</a>, <a class='category' href='/blog/categories/iam/'>iam</a>, <a class='category' href='/blog/categories/task-definition/'>task definition</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.farshidesigns.com/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli/" data-via="farshitwitts" data-counturl="http://www.farshidesigns.com/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/04/27/amazon-s3-notes/" title="Previous Post: Amazon S3 Notes">&laquo; Amazon S3 Notes</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli/">Setup a AWS ECS Container Purely Using CLI</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/27/amazon-s3-notes/">Amazon S3 Notes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/27/amazon-sns-notes/">Amazon SNS Notes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/27/amazon-swf-notes/">Amazon SWF Notes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/27/amazon-sqs/">Amazon SQS Notes</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/reza.farshi?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Reza Farshi -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'farshidesigns';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.farshidesigns.com/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli/';
+        var disqus_url = 'http://www.farshidesigns.com/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<a title="Real Time Web Analytics" href="http://clicky.com/100835142"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100835142); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100835142ns.gif" /></p></noscript>
+
+
+</body>
+</html>

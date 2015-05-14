@@ -9,7 +9,7 @@
   <meta name="author" content="Reza Farshi">
 
   
-  <meta name="description" content="If you want to set sublime as the main editor for git and other programs on your mac, depends on what you bash you use you should edit ~/. &hellip;">
+  <meta name="description" content="I&rsquo;ve collected some information about default limits in AWS and other numerical facts from Amazon AWS official website. May be you find it &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,67 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/04/24/amazon-aws-numbers-and-default-limits-facts/">Amazon AWS Numerical Facts</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-04-24T16:01:40+10:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:01 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;ve collected some information about default limits in AWS and other numerical facts from <a href="http://aws.amazon.com/">Amazon AWS official website</a>. May be you find it useful if you want to prepare for AWS architecture certification exam. This post my be updated in the future.</p>
+
+<ul>
+<li>AWS is available in : 190 countries</li>
+<li>Number of available regions: 11</li>
+<li>Number of Edge Locations: 52</li>
+<li>Availability zones per regions: two or more</li>
+<li>Amazon S3 designed for 11 nines durability , 99.99999999999% in a given year</li>
+<li>Amazon S3 availability is 99.99% in a given year</li>
+<li>Objects size range in S3  is :  Min: 1 Byte , Max: 5TB</li>
+<li>S3 Number of buckets: 100</li>
+<li>Number of objects you can store: UNLIMITED</li>
+<li>Glacier retrieve time : 3 to 5 Hours</li>
+<li>RSS type durability is %99.99 instead Standard S3 which is %99.99999999999</li>
+<li>RDS size range : Min: 5GB , Max:3TB</li>
+<li>Aurora size range : Min: 10GB  Max: 64TB</li>
+<li>Aurora Availability : 2 Copies for each 3 Zone &ndash;> 6 Copies</li>
+<li>Elastic Block Storage (EBS) size , Min: 1GB  , Max: 1TB</li>
+<li>VPC per region Max : 5 (default - increased upon request)</li>
+<li>Internet Gateway per region : Max 5 (default - increased upon request)</li>
+<li>Customer Gateways per region : Max 50 (default - increased upon request)</li>
+<li>Elastic IP addresses per region: Max 5 (default - increased upon request)</li>
+<li>Rout tables per VPC : Max 200 (default - increased upon request)</li>
+<li>Internet Attached to a subnet at time : Only 1</li>
+<li>Security group per VPC : Max 100</li>
+<li>Rules per Security Group: Max 50</li>
+<li>VPN connections per region: Max 50</li>
+<li>General purpose SSD EBS availability: 99.999%</li>
+<li>General purpose SSD EBS IOPS per GB: 3 to 3000 ( just for short period)</li>
+<li>Simple Queue Service(SQS) Message Size : Max 256 Kb</li>
+<li>AWS CloudFormaton Limits : 20 stack</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -226,6 +287,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli/">Setup a AWS ECS Container Purely Using CLI</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/04/27/amazon-s3-notes/">Amazon S3 Notes</a>
       </li>
     
@@ -239,10 +304,6 @@
     
       <li class="post">
         <a href="/blog/2015/04/27/amazon-sqs/">Amazon SQS Notes</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/04/27/amazon-vpc/">Amazon VPC Notes</a>
       </li>
     
   </ul>

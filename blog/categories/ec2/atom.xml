@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ec2 | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/ec2/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-04-28T20:36:20+10:00</updated>
+  <updated>2015-05-15T00:04:48+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -54,6 +54,8 @@
 <li>Supported programming language for lambda is JavaScript.</li>
 <li>Lambda designed to be available in 99.99%</li>
 <li>First one million request of Lambda are free and there after is 0.20 per 1 mil request</li>
+<li>Copying snapshots that were encrypted with non-default AWS Key Management Service master keys is not supported at this time.</li>
+<li>Snapshots are sent/stored on Amazon S3</li>
 </ul>
 
 ]]></content>
