@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Task Definition | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/task-definition/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-05-15T00:12:20+10:00</updated>
+  <updated>2015-05-15T00:17:30+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -204,7 +204,7 @@ the container instance it needs cluster be specified.</p>
 
 <p>To list the details of containers in our cluster we can use following commands. The details of containers , amount of CPU , memory capacity and also network ports will be shown.  Container-instances which listed for you by the previous command should be passed to this command.</p>
 
-<pre><code> ~/ aaws ecs describe-container-instances --cluster MyCluster --container-instances 3de53ed6-5017-46fa-9b9f-37ad8a2b9da6
+<pre><code> ~/ aws ecs describe-container-instances --cluster MyCluster --container-instances 3de53ed6-5017-46fa-9b9f-37ad8a2b9da6
 </code></pre>
 
 <h2>Step 6: Register a Task Definition</h2>
