@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Iam | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/iam/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-05-15T00:17:30+10:00</updated>
+  <updated>2015-05-15T14:53:52+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -37,7 +37,7 @@
 
 <h2>Step 1 - configure keys</h2>
 
-<pre><code> ~/ aws configure
+<pre><code class="objc"> ~/ aws configure
 AWS Access Key ID []:****************6HEQ
 AWS Secret Access Key []:****************mFbV
 Default region name []: ap-southeast-2
@@ -235,7 +235,7 @@ the container instance it needs cluster be specified.</p>
 
 <p>by issuing the following command and passing the created file to the command we be able to register our task definition.</p>
 
-<pre><code> ~/ aws ecs register-task-definition --cli-input-json file://sleep360.json
+<pre><code class=""> ~/ aws ecs register-task-definition --cli-input-json file://sleep360.json
 {
     "taskDefinition": {
         "volumes": [],
@@ -265,7 +265,7 @@ the container instance it needs cluster be specified.</p>
 
 <p>To be sure that our task is registered, issuing this command will list the defined tasks.</p>
 
-<pre><code> ~/  aws ecs list-task-definitions
+<pre><code class=""> ~/  aws ecs list-task-definitions
 {
     "taskDefinitionArns": [
         "arn:aws:ecs:ap-southeast-2:338764315603:task-definition/sleep360:1"
@@ -325,7 +325,7 @@ the container instance it needs cluster be specified.</p>
 }
 </code></pre>
 
-<h2>Step 8 (Final): SSH into the EC2 machine an list the  container</h2>
+<h2>Step 8 (Final): SSH into the EC2 machine and list running container</h2>
 
 <p>In the final step  we want to ssh into the machine and list the containers inside the machine.</p>
 

@@ -118,23 +118,24 @@
 
 <h2>Step 1 - configure keys</h2>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws configure
-</span><span class='line'>AWS Access Key ID []:****************6HEQ
-</span><span class='line'>AWS Secret Access Key []:****************mFbV
-</span><span class='line'>Default region name []: ap-southeast-2
-</span><span class='line'>Default output format []:Json</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">configure</span>
+</span><span class='line'><span class="n">AWS</span> <span class="n">Access</span> <span class="n">Key</span> <span class="n">ID</span> <span class="p">[]</span><span class="o">:****************</span><span class="mi">6</span><span class="n">HEQ</span>
+</span><span class='line'><span class="n">AWS</span> <span class="n">Secret</span> <span class="n">Access</span> <span class="n">Key</span> <span class="p">[]</span><span class="o">:****************</span><span class="n">mFbV</span>
+</span><span class='line'><span class="n">Default</span> <span class="n">region</span> <span class="n">name</span> <span class="p">[]</span><span class="o">:</span> <span class="n">ap</span><span class="o">-</span><span class="n">southeast</span><span class="o">-</span><span class="mi">2</span>
+</span><span class='line'><span class="n">Default</span> <span class="n">output</span> <span class="n">format</span> <span class="p">[]</span><span class="o">:</span><span class="n">Json</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>I choose ap-southeast-2 , coz I am using Sydney region.</p>
 
 <h2>Step 2: Create a Cluster</h2>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -145,17 +146,18 @@
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs create-cluster --cluster-name MyCluster
-</span><span class='line'>{
-</span><span class='line'>    "cluster": {
-</span><span class='line'>        "status": "ACTIVE",
-</span><span class='line'>        "clusterName": "MyCluster",
-</span><span class='line'>        "registeredContainerInstancesCount": 0,
-</span><span class='line'>        "pendingTasksCount": 0,
-</span><span class='line'>        "runningTasksCount": 0,
-</span><span class='line'>        "clusterArn": "arn:aws:ecs:ap-southeast-2:338764315603:cluster/MyCluster"
-</span><span class='line'>    }
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ecs</span> <span class="n">create</span><span class="o">-</span><span class="n">cluster</span> <span class="o">--</span><span class="n">cluster</span><span class="o">-</span><span class="n">name</span> <span class="n">MyCluster</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="s">&quot;cluster&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s">&quot;status&quot;</span><span class="o">:</span> <span class="s">&quot;ACTIVE&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;clusterName&quot;</span><span class="o">:</span> <span class="s">&quot;MyCluster&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;registeredContainerInstancesCount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;pendingTasksCount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;runningTasksCount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;clusterArn&quot;</span><span class="o">:</span> <span class="s">&quot;arn:aws:ecs:ap-southeast-2:338764315603:cluster/MyCluster&quot;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>This Step is optional, If you don&rsquo;t create a cluster containers will be created on the default cluster.</p>
@@ -168,8 +170,8 @@
 
 <p>To create a key pair named MyKeyPair, use the create-key-pair command, and use the <code>--query</code> option and the <code>--output</code> text option to pipe your private key directly into a file.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text &gt; MyKeyPair.pem
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ec2</span> <span class="n">create</span><span class="o">-</span><span class="n">key</span><span class="o">-</span><span class="n">pair</span> <span class="o">--</span><span class="n">key</span><span class="o">-</span><span class="n">name</span> <span class="n">MyKeyPair</span> <span class="o">--</span><span class="n">query</span> <span class="err">&#39;</span><span class="n">KeyMaterial</span><span class="err">&#39;</span> <span class="o">--</span><span class="n">output</span> <span class="n">text</span> <span class="o">&gt;</span> <span class="n">MyKeyPair</span><span class="p">.</span><span class="n">pem</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -179,7 +181,7 @@
 
 <p>To displaying Your Key Pair to verify you have done the key pair creation.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -188,15 +190,16 @@
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ec2 describe-key-pairs --key-name MyKeyPair
-</span><span class='line'>{
-</span><span class='line'>    "KeyPairs": [
-</span><span class='line'>        {
-</span><span class='line'>            "KeyName": "MyKeyPair",
-</span><span class='line'>            "KeyFingerprint": "df:6a:55:cc:66:4f:2e:a3:8b:ca:67:16:be:b9:f5:4a:db:5a:26:1a"
-</span><span class='line'>        }
-</span><span class='line'>    ]
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ec2</span> <span class="n">describe</span><span class="o">-</span><span class="n">key</span><span class="o">-</span><span class="n">pairs</span> <span class="o">--</span><span class="n">key</span><span class="o">-</span><span class="n">name</span> <span class="n">MyKeyPair</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="s">&quot;KeyPairs&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>            <span class="s">&quot;KeyName&quot;</span><span class="o">:</span> <span class="s">&quot;MyKeyPair&quot;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&quot;KeyFingerprint&quot;</span><span class="o">:</span> <span class="s">&quot;df:6a:55:cc:66:4f:2e:a3:8b:ca:67:16:be:b9:f5:4a:db:5a:26:1a&quot;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">]</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>Step 3-2 : Creating a Security Group</h3>
@@ -205,12 +208,13 @@
 
 <p>Here we don’t want to have a docker instance to communicate with outside but I open the port 22 coz later we might want to login into the machine and inspect AWS ecs-agent and our created docker instance. AWS ecs-agent is a docket instance by itself. In the real production environment it’s not a good practice to open ssh port on the ECS machine but if you wan to do it you should choose restricted CIDR instead of 0.0.0.0/0.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ec2 create-security-group --group-name MySecurityGroup --description "My security group”
-</span><span class='line'> ~/ aws ec2 authorize-security-group-ingress --group-name MySecurityGroup --protocol tcp --port 22 --cidr 0.0.0.0/0
-</span><span class='line'> ~/  aws ec2 describe-security-groups --group-names MySecurityGroup</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ec2</span> <span class="n">create</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">group</span> <span class="o">--</span><span class="n">group</span><span class="o">-</span><span class="n">name</span> <span class="n">MySecurityGroup</span> <span class="o">--</span><span class="n">description</span> <span class="s">&quot;My security group”</span>
+</span><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ec2</span> <span class="n">authorize</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">group</span><span class="o">-</span><span class="n">ingress</span> <span class="o">--</span><span class="n">group</span><span class="o">-</span><span class="n">name</span> <span class="n">MySecurityGroup</span> <span class="o">--</span><span class="n">protocol</span> <span class="n">tcp</span> <span class="o">--</span><span class="n">port</span> <span class="mi">22</span> <span class="o">--</span><span class="n">cidr</span> <span class="mf">0.0.0.0</span><span class="o">/</span><span class="mi">0</span>
+</span><span class='line'><span class="err"></span> <span class="o">~/</span>  <span class="n">aws</span> <span class="n">ec2</span> <span class="n">describe</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">groups</span> <span class="o">--</span><span class="n">group</span><span class="o">-</span><span class="n">names</span> <span class="n">MySecurityGroup</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>Step 3-3: Creating userdata.txt to specify ClusterName</h3>
@@ -222,10 +226,11 @@ echo ECS_CLUSTER=your_cluster_name &gt;&gt; /etc/ecs/ecs.config</code></p>
 
 <p>Create a file <code>userdata.txt</code> and paste these lines into it:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/bash 
-</span><span class='line'>echo ECS_CLUSTER=MyCluster &gt;&gt; /etc/ecs/ecs.config</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="cp">#!/bin/bash </span>
+</span><span class='line'><span class="n">echo</span> <span class="n">ECS_CLUSTER</span><span class="o">=</span><span class="n">MyCluster</span> <span class="o">&gt;&gt;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ecs</span><span class="o">/</span><span class="n">ecs</span><span class="p">.</span><span class="n">config</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>Step 3-4 : Creating required instance profile, role and policy</h3>
@@ -234,7 +239,7 @@ echo ECS_CLUSTER=your_cluster_name &gt;&gt; /etc/ecs/ecs.config</code></p>
 
 <p>Create a new file <code>ecsPolicy.json</code> using nano or vim and put following lines into the file:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -247,24 +252,25 @@ echo ECS_CLUSTER=your_cluster_name &gt;&gt; /etc/ecs/ecs.config</code></p>
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>{
-</span><span class='line'>  "Version": "2012-10-17",
-</span><span class='line'>  "Statement": [
-</span><span class='line'>    {
-</span><span class='line'>      "Sid": "",
-</span><span class='line'>      "Effect": "Allow",
-</span><span class='line'>      "Principal": {
-</span><span class='line'>        "Service": "ec2.amazonaws.com"
-</span><span class='line'>      },
-</span><span class='line'>      "Action": "sts:AssumeRole"
-</span><span class='line'>    }
-</span><span class='line'>  ]
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="s">&quot;Version&quot;</span><span class="o">:</span> <span class="s">&quot;2012-10-17&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s">&quot;Statement&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>      <span class="s">&quot;Sid&quot;</span><span class="o">:</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&quot;Effect&quot;</span><span class="o">:</span> <span class="s">&quot;Allow&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&quot;Principal&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s">&quot;Service&quot;</span><span class="o">:</span> <span class="s">&quot;ec2.amazonaws.com&quot;</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="s">&quot;Action&quot;</span><span class="o">:</span> <span class="s">&quot;sts:AssumeRole&quot;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">]</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Create a new file <code>rolePolicy.json</code> and put the following lines into the file:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -283,39 +289,41 @@ echo ECS_CLUSTER=your_cluster_name &gt;&gt; /etc/ecs/ecs.config</code></p>
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
 <span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> {
-</span><span class='line'>  "Version": "2012-10-17",
-</span><span class='line'>  "Statement": [
-</span><span class='line'>    {
-</span><span class='line'>      "Effect": "Allow",
-</span><span class='line'>      "Action": [
-</span><span class='line'>        "ecs:CreateCluster",
-</span><span class='line'>        "ecs:DeregisterContainerInstance",
-</span><span class='line'>        "ecs:DiscoverPollEndpoint",
-</span><span class='line'>        "ecs:Poll",
-</span><span class='line'>        "ecs:RegisterContainerInstance",
-</span><span class='line'>        "ecs:Submit*"
-</span><span class='line'>      ],
-</span><span class='line'>      "Resource": [
-</span><span class='line'>        "*"
-</span><span class='line'>      ]
-</span><span class='line'>    }
-</span><span class='line'>  ]
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'> <span class="p">{</span>
+</span><span class='line'>  <span class="s">&quot;Version&quot;</span><span class="o">:</span> <span class="s">&quot;2012-10-17&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s">&quot;Statement&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>      <span class="s">&quot;Effect&quot;</span><span class="o">:</span> <span class="s">&quot;Allow&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&quot;Action&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>        <span class="s">&quot;ecs:CreateCluster&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;ecs:DeregisterContainerInstance&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;ecs:DiscoverPollEndpoint&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;ecs:Poll&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;ecs:RegisterContainerInstance&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;ecs:Submit*&quot;</span>
+</span><span class='line'>      <span class="p">],</span>
+</span><span class='line'>      <span class="s">&quot;Resource&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>        <span class="s">&quot;*&quot;</span>
+</span><span class='line'>      <span class="p">]</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">]</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>And then issue these set of commands:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/.aws/ aws iam create-role --role-name ecsRole --assume-role-policy-document file://ecsPolicy.json
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span><span class="p">.</span><span class="n">aws</span><span class="o">/</span> <span class="n">aws</span> <span class="n">iam</span> <span class="n">create</span><span class="o">-</span><span class="n">role</span> <span class="o">--</span><span class="n">role</span><span class="o">-</span><span class="n">name</span> <span class="n">ecsRole</span> <span class="o">--</span><span class="n">assume</span><span class="o">-</span><span class="n">role</span><span class="o">-</span><span class="n">policy</span><span class="o">-</span><span class="n">document</span> <span class="nl">file</span><span class="p">:</span><span class="c1">//ecsPolicy.json</span>
 </span><span class='line'>
-</span><span class='line'> ~/.aws/ aws iam put-role-policy --role-name ecsRole --policy-name ecsRolePolicy  --policy-document file://rolePolicy.json
+</span><span class='line'><span class="err"></span> <span class="o">~/</span><span class="p">.</span><span class="n">aws</span><span class="o">/</span> <span class="n">aws</span> <span class="n">iam</span> <span class="n">put</span><span class="o">-</span><span class="n">role</span><span class="o">-</span><span class="n">policy</span> <span class="o">--</span><span class="n">role</span><span class="o">-</span><span class="n">name</span> <span class="n">ecsRole</span> <span class="o">--</span><span class="n">policy</span><span class="o">-</span><span class="n">name</span> <span class="n">ecsRolePolicy</span>  <span class="o">--</span><span class="n">policy</span><span class="o">-</span><span class="n">document</span> <span class="nl">file</span><span class="p">:</span><span class="c1">//rolePolicy.json</span>
 </span><span class='line'>
-</span><span class='line'> ~/.aws/ aws iam add-role-to-instance-profile --instance-profile-name ecsRole  --role-name ecsRole</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="err"></span> <span class="o">~/</span><span class="p">.</span><span class="n">aws</span><span class="o">/</span> <span class="n">aws</span> <span class="n">iam</span> <span class="n">add</span><span class="o">-</span><span class="n">role</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">instance</span><span class="o">-</span><span class="n">profile</span> <span class="o">--</span><span class="n">instance</span><span class="o">-</span><span class="n">profile</span><span class="o">-</span><span class="n">name</span> <span class="n">ecsRole</span>  <span class="o">--</span><span class="n">role</span><span class="o">-</span><span class="n">name</span> <span class="n">ecsRole</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>Step 3-5 : Running EC2 instance on a default VPC</h3>
@@ -329,14 +337,16 @@ echo ECS_CLUSTER=your_cluster_name &gt;&gt; /etc/ecs/ecs.config</code></p>
 
 <p>So now we can pass security group and IAM instance profile that we created in previous steps.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ec2 run-instances   --image-id ami-39017e03 --count 1 --instance-type t2.micro --key-name MyKeyPair --iam-instance-profile "Name= ecsRole" --security-groups MySecurityGroup --user-data file://userdata.txt</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ec2</span> <span class="n">run</span><span class="o">-</span><span class="n">instances</span>   <span class="o">--</span><span class="n">image</span><span class="o">-</span><span class="kt">id</span> <span class="n">ami</span><span class="o">-</span><span class="mf">39017e03</span> <span class="o">--</span><span class="n">count</span> <span class="mi">1</span> <span class="o">--</span><span class="n">instance</span><span class="o">-</span><span class="n">type</span> <span class="n">t2</span><span class="p">.</span><span class="n">micro</span> <span class="o">--</span><span class="n">key</span><span class="o">-</span><span class="n">name</span> <span class="n">MyKeyPair</span> <span class="o">--</span><span class="n">iam</span><span class="o">-</span><span class="n">instance</span><span class="o">-</span><span class="n">profile</span> <span class="s">&quot;Name= ecsRole&quot;</span> <span class="o">--</span><span class="n">security</span><span class="o">-</span><span class="n">groups</span> <span class="n">MySecurityGroup</span> <span class="o">--</span><span class="n">user</span><span class="o">-</span><span class="n">data</span> <span class="nl">file</span><span class="p">:</span><span class="c1">//userdata.txt</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>Step 3-6: Adding a Name Tag to Your Instance</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ec2 create-tags --resources i-fcb33a20 --tags Key=Name,Value=MyECSInstance</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ec2</span> <span class="n">create</span><span class="o">-</span><span class="n">tags</span> <span class="o">--</span><span class="n">resources</span> <span class="n">i</span><span class="o">-</span><span class="n">fcb33a20</span> <span class="o">--</span><span class="n">tags</span> <span class="n">Key</span><span class="o">=</span><span class="n">Name</span><span class="p">,</span><span class="n">Value</span><span class="o">=</span><span class="n">MyECSInstance</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>Step 4:  List Container Instances</h2>
@@ -344,26 +354,28 @@ echo ECS_CLUSTER=your_cluster_name &gt;&gt; /etc/ecs/ecs.config</code></p>
 <p>by issuing this command you can see the container instances list. Because we configure ace-agent to be deployed in MyCluster, for listing
 the container instance it needs cluster be specified.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs list-container-instances --cluster MyCluster
-</span><span class='line'>{
-</span><span class='line'>    "containerInstanceArns": [
-</span><span class='line'>        "arn:aws:ecs:ap-southeast-2:338764315603:container-instance/3de53ed6-5017-46fa-9b9f-37ad8a2b9da6"
-</span><span class='line'>    ]
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ecs</span> <span class="n">list</span><span class="o">-</span><span class="n">container</span><span class="o">-</span><span class="n">instances</span> <span class="o">--</span><span class="n">cluster</span> <span class="n">MyCluster</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="s">&quot;containerInstanceArns&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>        <span class="s">&quot;arn:aws:ecs:ap-southeast-2:338764315603:container-instance/3de53ed6-5017-46fa-9b9f-37ad8a2b9da6&quot;</span>
+</span><span class='line'>    <span class="p">]</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>Step 5: Describe your Container Instance</h2>
 
 <p>To list the details of containers in our cluster we can use following commands. The details of containers , amount of CPU , memory capacity and also network ports will be shown.  Container-instances which listed for you by the previous command should be passed to this command.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs describe-container-instances --cluster MyCluster --container-instances 3de53ed6-5017-46fa-9b9f-37ad8a2b9da6</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ecs</span> <span class="n">describe</span><span class="o">-</span><span class="n">container</span><span class="o">-</span><span class="n">instances</span> <span class="o">--</span><span class="n">cluster</span> <span class="n">MyCluster</span> <span class="o">--</span><span class="n">container</span><span class="o">-</span><span class="n">instances</span> <span class="mi">3</span><span class="n">de53ed6</span><span class="o">-</span><span class="mi">5017</span><span class="o">-</span><span class="mf">46f</span><span class="n">a</span><span class="o">-</span><span class="mi">9</span><span class="n">b9f</span><span class="o">-</span><span class="mi">37</span><span class="n">ad8a2b9da6</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>Step 6: Register a Task Definition</h2>
@@ -372,7 +384,7 @@ the container instance it needs cluster be specified.</p>
 
 <p><code>~/ nano sleep360.json</code></p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -388,29 +400,30 @@ the container instance it needs cluster be specified.</p>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>{
-</span><span class='line'>  "containerDefinitions": [
-</span><span class='line'>    {
-</span><span class='line'>      "name": "sleep",
-</span><span class='line'>      "image": "busybox",
-</span><span class='line'>      "cpu": 10,
-</span><span class='line'>      "command": [
-</span><span class='line'>        "sleep",
-</span><span class='line'>        "360"
-</span><span class='line'>      ],
-</span><span class='line'>      "memory": 10,
-</span><span class='line'>      "essential": true
-</span><span class='line'>    }
-</span><span class='line'>  ],
-</span><span class='line'>  "family": "sleep360"
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="s">&quot;containerDefinitions&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>      <span class="s">&quot;name&quot;</span><span class="o">:</span> <span class="s">&quot;sleep&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&quot;image&quot;</span><span class="o">:</span> <span class="s">&quot;busybox&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&quot;cpu&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&quot;command&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>        <span class="s">&quot;sleep&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;360&quot;</span>
+</span><span class='line'>      <span class="p">],</span>
+</span><span class='line'>      <span class="s">&quot;memory&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&quot;essential&quot;</span><span class="o">:</span> <span class="nb">true</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">],</span>
+</span><span class='line'>  <span class="s">&quot;family&quot;</span><span class="o">:</span> <span class="s">&quot;sleep360&quot;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Here our defined task is essential and it means the cluster will be died if this container dies. our task is a simple task which wants to run a bash command  &lsquo;sleep 360&rsquo;  and the container will be terminated after running the command. exactly after 6 minutes. :D</p>
 
 <p>by issuing the following command and passing the created file to the command we be able to register our task definition.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -436,77 +449,81 @@ the container instance it needs cluster be specified.</p>
 <span class='line-number'>24</span>
 <span class='line-number'>25</span>
 <span class='line-number'>26</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs register-task-definition --cli-input-json file://sleep360.json
-</span><span class='line'>{
-</span><span class='line'>    "taskDefinition": {
-</span><span class='line'>        "volumes": [],
-</span><span class='line'>        "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:338764315603:task-definition/sleep360:1",
-</span><span class='line'>        "containerDefinitions": [
-</span><span class='line'>            {
-</span><span class='line'>                "environment": [],
-</span><span class='line'>                "name": "sleep",
-</span><span class='line'>                "mountPoints": [],
-</span><span class='line'>                "image": "busybox",
-</span><span class='line'>                "cpu": 10,
-</span><span class='line'>                "portMappings": [],
-</span><span class='line'>                "command": [
-</span><span class='line'>                    "sleep",
-</span><span class='line'>                    "360"
-</span><span class='line'>                ],
-</span><span class='line'>                "memory": 10,
-</span><span class='line'>                "essential": true,
-</span><span class='line'>                "volumesFrom": []
-</span><span class='line'>            }
-</span><span class='line'>        ],
-</span><span class='line'>        "family": "sleep360",
-</span><span class='line'>        "revision": 1
-</span><span class='line'>    }
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ecs</span> <span class="k">register</span><span class="o">-</span><span class="n">task</span><span class="o">-</span><span class="n">definition</span> <span class="o">--</span><span class="n">cli</span><span class="o">-</span><span class="n">input</span><span class="o">-</span><span class="n">json</span> <span class="nl">file</span><span class="p">:</span><span class="c1">//sleep360.json</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="s">&quot;taskDefinition&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s">&quot;volumes&quot;</span><span class="o">:</span> <span class="p">[],</span>
+</span><span class='line'>        <span class="s">&quot;taskDefinitionArn&quot;</span><span class="o">:</span> <span class="s">&quot;arn:aws:ecs:ap-southeast-2:338764315603:task-definition/sleep360:1&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;containerDefinitions&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>            <span class="p">{</span>
+</span><span class='line'>                <span class="s">&quot;environment&quot;</span><span class="o">:</span> <span class="p">[],</span>
+</span><span class='line'>                <span class="s">&quot;name&quot;</span><span class="o">:</span> <span class="s">&quot;sleep&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="s">&quot;mountPoints&quot;</span><span class="o">:</span> <span class="p">[],</span>
+</span><span class='line'>                <span class="s">&quot;image&quot;</span><span class="o">:</span> <span class="s">&quot;busybox&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="s">&quot;cpu&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+</span><span class='line'>                <span class="s">&quot;portMappings&quot;</span><span class="o">:</span> <span class="p">[],</span>
+</span><span class='line'>                <span class="s">&quot;command&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>                    <span class="s">&quot;sleep&quot;</span><span class="p">,</span>
+</span><span class='line'>                    <span class="s">&quot;360&quot;</span>
+</span><span class='line'>                <span class="p">],</span>
+</span><span class='line'>                <span class="s">&quot;memory&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+</span><span class='line'>                <span class="s">&quot;essential&quot;</span><span class="o">:</span> <span class="nb">true</span><span class="p">,</span>
+</span><span class='line'>                <span class="s">&quot;volumesFrom&quot;</span><span class="o">:</span> <span class="p">[]</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">],</span>
+</span><span class='line'>        <span class="s">&quot;family&quot;</span><span class="o">:</span> <span class="s">&quot;sleep360&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&quot;revision&quot;</span><span class="o">:</span> <span class="mi">1</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>To be sure that our task is registered, issuing this command will list the defined tasks.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/  aws ecs list-task-definitions
-</span><span class='line'>{
-</span><span class='line'>    "taskDefinitionArns": [
-</span><span class='line'>        "arn:aws:ecs:ap-southeast-2:338764315603:task-definition/sleep360:1"
-</span><span class='line'>    ]
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span>  <span class="n">aws</span> <span class="n">ecs</span> <span class="n">list</span><span class="o">-</span><span class="n">task</span><span class="o">-</span><span class="n">definitions</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="s">&quot;taskDefinitionArns&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>        <span class="s">&quot;arn:aws:ecs:ap-southeast-2:338764315603:task-definition/sleep360:1&quot;</span>
+</span><span class='line'>    <span class="p">]</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>Step 7: Run a Task</h2>
 
 <p>To running a task simple use this command. By passing the count argument we can specify how many instance of container spin up on the cluster.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs run-task --cluster MyCluster --task-definition sleep360:1 --count 1</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ecs</span> <span class="n">run</span><span class="o">-</span><span class="n">task</span> <span class="o">--</span><span class="n">cluster</span> <span class="n">MyCluster</span> <span class="o">--</span><span class="n">task</span><span class="o">-</span><span class="n">definition</span> <span class="nl">sleep360</span><span class="p">:</span><span class="mi">1</span> <span class="o">--</span><span class="n">count</span> <span class="mi">1</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>To listing the task use the following command.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs list-tasks --cluster MyCluster
-</span><span class='line'>{
-</span><span class='line'>    "taskArns": [
-</span><span class='line'>        "arn:aws:ecs:ap-southeast-2:338764315603:task/7cceb4d5-8950-42a3-923e-b1859d401399"
-</span><span class='line'>    ]
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ecs</span> <span class="n">list</span><span class="o">-</span><span class="n">tasks</span> <span class="o">--</span><span class="n">cluster</span> <span class="n">MyCluster</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="s">&quot;taskArns&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>        <span class="s">&quot;arn:aws:ecs:ap-southeast-2:338764315603:task/7cceb4d5-8950-42a3-923e-b1859d401399&quot;</span>
+</span><span class='line'>    <span class="p">]</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>By passing the task ARN (listed above) to the following command we can see details of the running task.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -537,40 +554,41 @@ the container instance it needs cluster be specified.</p>
 <span class='line-number'>29</span>
 <span class='line-number'>30</span>
 <span class='line-number'>31</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> ~/ aws ecs describe-tasks --cluster MyCluster --task 7cceb4d5-8950-42a3-923e-b1859d401399
-</span><span class='line'>{
-</span><span class='line'>    "failures": [],
-</span><span class='line'>    "tasks": [
-</span><span class='line'>        {
-</span><span class='line'>            "taskArn": "arn:aws:ecs:ap-southeast-2:338764315603:task/7cceb4d5-8950-42a3-923e-b1859d401399",
-</span><span class='line'>            "overrides": {
-</span><span class='line'>                "containerOverrides": [
-</span><span class='line'>                    {
-</span><span class='line'>                        "name": "sleep"
-</span><span class='line'>                    }
-</span><span class='line'>                ]
-</span><span class='line'>            },
-</span><span class='line'>            "lastStatus": "RUNNING",
-</span><span class='line'>            "containerInstanceArn": "arn:aws:ecs:ap-southeast-2:338764315603:container-instance/3de53ed6-5017-46fa-9b9f-37ad8a2b9da6",
-</span><span class='line'>            "clusterArn": "arn:aws:ecs:ap-southeast-2:338764315603:cluster/MyCluster",
-</span><span class='line'>            "desiredStatus": "RUNNING",
-</span><span class='line'>            "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:338764315603:task-definition/sleep360:1",
-</span><span class='line'>            "containers": [
-</span><span class='line'>                {
-</span><span class='line'>                    "containerArn": "arn:aws:ecs:ap-southeast-2:338764315603:container/d440587d-b23b-45f3-a2a8-ff8b195d0240",
-</span><span class='line'>                    "taskArn": "arn:aws:ecs:ap-southeast-2:338764315603:task/7cceb4d5-8950-42a3-923e-b1859d401399",
-</span><span class='line'>                    "name": "sleep",
-</span><span class='line'>                    "networkBindings": [],
-</span><span class='line'>                    "lastStatus": "RUNNING",
-</span><span class='line'>                    "exitCode": 0
-</span><span class='line'>                }
-</span><span class='line'>            ]
-</span><span class='line'>        }
-</span><span class='line'>    ]
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="err"></span> <span class="o">~/</span> <span class="n">aws</span> <span class="n">ecs</span> <span class="n">describe</span><span class="o">-</span><span class="n">tasks</span> <span class="o">--</span><span class="n">cluster</span> <span class="n">MyCluster</span> <span class="o">--</span><span class="n">task</span> <span class="mi">7</span><span class="n">cceb4d5</span><span class="o">-</span><span class="mi">8950</span><span class="o">-</span><span class="mi">42</span><span class="n">a3</span><span class="o">-</span><span class="mi">923</span><span class="n">e</span><span class="o">-</span><span class="n">b1859d401399</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="s">&quot;failures&quot;</span><span class="o">:</span> <span class="p">[],</span>
+</span><span class='line'>    <span class="s">&quot;tasks&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>            <span class="s">&quot;taskArn&quot;</span><span class="o">:</span> <span class="s">&quot;arn:aws:ecs:ap-southeast-2:338764315603:task/7cceb4d5-8950-42a3-923e-b1859d401399&quot;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&quot;overrides&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>                <span class="s">&quot;containerOverrides&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>                    <span class="p">{</span>
+</span><span class='line'>                        <span class="s">&quot;name&quot;</span><span class="o">:</span> <span class="s">&quot;sleep&quot;</span>
+</span><span class='line'>                    <span class="p">}</span>
+</span><span class='line'>                <span class="p">]</span>
+</span><span class='line'>            <span class="p">},</span>
+</span><span class='line'>            <span class="s">&quot;lastStatus&quot;</span><span class="o">:</span> <span class="s">&quot;RUNNING&quot;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&quot;containerInstanceArn&quot;</span><span class="o">:</span> <span class="s">&quot;arn:aws:ecs:ap-southeast-2:338764315603:container-instance/3de53ed6-5017-46fa-9b9f-37ad8a2b9da6&quot;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&quot;clusterArn&quot;</span><span class="o">:</span> <span class="s">&quot;arn:aws:ecs:ap-southeast-2:338764315603:cluster/MyCluster&quot;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&quot;desiredStatus&quot;</span><span class="o">:</span> <span class="s">&quot;RUNNING&quot;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&quot;taskDefinitionArn&quot;</span><span class="o">:</span> <span class="s">&quot;arn:aws:ecs:ap-southeast-2:338764315603:task-definition/sleep360:1&quot;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&quot;containers&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>                <span class="p">{</span>
+</span><span class='line'>                    <span class="s">&quot;containerArn&quot;</span><span class="o">:</span> <span class="s">&quot;arn:aws:ecs:ap-southeast-2:338764315603:container/d440587d-b23b-45f3-a2a8-ff8b195d0240&quot;</span><span class="p">,</span>
+</span><span class='line'>                    <span class="s">&quot;taskArn&quot;</span><span class="o">:</span> <span class="s">&quot;arn:aws:ecs:ap-southeast-2:338764315603:task/7cceb4d5-8950-42a3-923e-b1859d401399&quot;</span><span class="p">,</span>
+</span><span class='line'>                    <span class="s">&quot;name&quot;</span><span class="o">:</span> <span class="s">&quot;sleep&quot;</span><span class="p">,</span>
+</span><span class='line'>                    <span class="s">&quot;networkBindings&quot;</span><span class="o">:</span> <span class="p">[],</span>
+</span><span class='line'>                    <span class="s">&quot;lastStatus&quot;</span><span class="o">:</span> <span class="s">&quot;RUNNING&quot;</span><span class="p">,</span>
+</span><span class='line'>                    <span class="s">&quot;exitCode&quot;</span><span class="o">:</span> <span class="mi">0</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">]</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">]</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Step 8 (Final): SSH into the EC2 machine an list the  container</h2>
+<h2>Step 8 (Final): SSH into the EC2 machine and list running container</h2>
 
 <p>In the final step  we want to ssh into the machine and list the containers inside the machine.</p>
 
@@ -578,14 +596,14 @@ the container instance it needs cluster be specified.</p>
 
 <p>after login into the machine, you can issue  <code>packer -ps</code>  command to list the containers. you should see the  <code>ecs-agent</code> and  <code>sleep 360</code></p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[ec2-user@ip-xxx-xxx-xxx-xx ~]$ docker ps
-</span><span class='line'>CONTAINER ID        IMAGE                            COMMAND             CREATED             STATUS                  PORTS                        NAMES
-</span><span class='line'>95d32fb0a1a2        busybox:latest                   "sleep 360"         1 seconds ago       Up Less than a second                                ecs-sleep360-1-sleep-fec1a8f1fbfd9d82d601
-</span><span class='line'>0ad94851d185        amazon/amazon-ecs-agent:latest   "/agent"            11 minutes ago      Up 11 minutes           127.0.0.1:51678-&gt;51678/tcp   ecs-agent
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">ec2</span><span class="o">-</span><span class="n">user</span><span class="p">@</span><span class="n">ip</span><span class="o">-</span><span class="n">xxx</span><span class="o">-</span><span class="n">xxx</span><span class="o">-</span><span class="n">xxx</span><span class="o">-</span><span class="n">xx</span> <span class="o">~</span><span class="p">]</span><span class="err">$</span> <span class="n">docker</span> <span class="n">ps</span>
+</span><span class='line'><span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                            <span class="n">COMMAND</span>             <span class="n">CREATED</span>             <span class="n">STATUS</span>                  <span class="n">PORTS</span>                        <span class="n">NAMES</span>
+</span><span class='line'><span class="mi">95</span><span class="n">d32fb0a1a2</span>        <span class="nl">busybox</span><span class="p">:</span><span class="n">latest</span>                   <span class="s">&quot;sleep 360&quot;</span>         <span class="mi">1</span> <span class="n">seconds</span> <span class="n">ago</span>       <span class="n">Up</span> <span class="n">Less</span> <span class="n">than</span> <span class="n">a</span> <span class="n">second</span>                                <span class="n">ecs</span><span class="o">-</span><span class="n">sleep360</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">sleep</span><span class="o">-</span><span class="n">fec1a8f1fbfd9d82d601</span>
+</span><span class='line'><span class="mi">0</span><span class="n">ad94851d185</span>        <span class="n">amazon</span><span class="o">/</span><span class="n">amazon</span><span class="o">-</span><span class="n">ecs</span><span class="o">-</span><span class="nl">agent</span><span class="p">:</span><span class="n">latest</span>   <span class="s">&quot;/agent&quot;</span>            <span class="mi">11</span> <span class="n">minutes</span> <span class="n">ago</span>      <span class="n">Up</span> <span class="mi">11</span> <span class="n">minutes</span>           <span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">51678</span><span class="o">-&gt;</span><span class="mi">51678</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">ecs</span><span class="o">-</span><span class="n">agent</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
