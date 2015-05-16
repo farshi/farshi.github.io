@@ -4,7 +4,7 @@
   <title><![CDATA[FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-05-17T02:39:27+10:00</updated>
+  <updated>2015-05-17T02:47:10+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -77,8 +77,6 @@
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
-
-<p>This Step is optional, If you don&rsquo;t create a cluster containers will be created on the default cluster.</p>
 
 <h2>Step 3: Launch an Instance with the Amazon ECS AMI</h2>
 
