@@ -9,7 +9,7 @@
   <meta name="author" content="Reza Farshi">
 
   
-  <meta name="description" content="In This Blog post I’m trying to setup an ECS container in a custom cluster with one docker instance inside by using AWS CLI. The AWS user guides &hellip;">
+  <meta name="description" content="In This post I’m trying to setup an ECS container in a custom cluster with one docker instance inside by using AWS CLI. The AWS user guides partially &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,7 +83,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli/">Setup a AWS ECS Container Purely Using CLI</a></h1>
+      <h1 class="entry-title"><a href="/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli/">Setup an AWS ECS Container Purely Using CLI</a></h1>
     
     
       <p class="meta">
@@ -99,7 +99,7 @@
   </header>
 
 
-  <div class="entry-content"><p>In This Blog post I’m trying to setup an ECS container in a custom cluster with one docker instance inside by using AWS CLI. The  <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_AWSCLI.html">AWS user guides</a> partially describes how to setup an EC2 Container service using the AWS CLI but in some steps It leaves some tricks to the reader, for example user have to login to AWS console to setup EC2 machine needed to act as an ECS machine or in one of the steps you have to login and create needed an IAM role and required policies to assign to the EC2 machine. We need to assign appropriate role to the Ec2 Machine to letting it to communicate with ECS service to register and deregister the Ec2 Machine as a resource.</p>
+  <div class="entry-content"><p>In This post I’m trying to setup an ECS container in a custom cluster with one docker instance inside by using AWS CLI. The  <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_AWSCLI.html">AWS user guides</a> partially describes how to setup an EC2 Container service using the AWS CLI but in some steps It leaves some tricks to the reader, for example user have to login to AWS console to setup EC2 machine needed to act as an ECS machine or in one of the steps you have to login and create needed an IAM role and required policies to assign to the EC2 machine. We need to assign appropriate role to the EC2 Machine to letting it to communicate with ECS service to register and deregister the Ec2 Machine as a resource.</p>
 
 <p>In this post I walk through you to setup everything purely by AWS CLI commands from start to finish. It includes:</p>
 
@@ -109,10 +109,9 @@
 <li>Creating the instance of EC2 machine.</li>
 <li>Creating the required IAM role and in-line attached policies to assign to the EC2.</li>
 <li>Configuring EC2 machine to be assigned to custom cluster instead of default one.</li>
+<li>Defining and running a Task.</li>
 </ul>
 
-
-<p>This guide includes other steps which already have been described by AWS user guide itself and I did not add new stuffs to those steps but I reproduce that commands too. These steps are  Including task definition and ruining the task.</p>
 
 <p>Let’s get started with configuring the AWS CLI environment on your machine.</p>
 
@@ -607,7 +606,7 @@ the container instance it needs cluster be specified.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Hope you enjoy this blog post and helps you to understand the ECS service more.</p>
+<p>Hope you enjoy this post and hope it helps you to understand how to use the ECS service using AWS CLI.</p>
 </div>
   
   
@@ -1123,7 +1122,7 @@ the container instance it needs cluster be specified.</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli/">Setup a AWS ECS Container Purely Using CLI</a>
+        <a href="/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli/">Setup an AWS ECS Container Purely Using CLI</a>
       </li>
     
       <li class="post">
