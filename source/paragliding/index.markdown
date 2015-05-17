@@ -6,6 +6,5 @@ comments: true
 sharing: true
 footer: true
 ---
-I am passionate about flying. I Love Paragliding.  
-
-This page will be updated very soon!  
+I am passionate about flying. I Love Paragliding. 
+{% img right /images/parag.jpg  Love Paragliding %}  
