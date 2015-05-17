@@ -4,7 +4,7 @@
 
 url: http://www.farshidesigns.com
 title: FARSHI DESIGNS
-subtitle: My thoughts on Software Architecture, Cloud Implementation , DevOps, Agile, Technology, Life and my favorite sport Paragliding.
+subtitle: My thoughts on Software Architecture, Cloud Technology, DevOps, Being Happy and Paragliding.
 author: Reza Farshi 
 simple_search: https://www.google.com/search
 description: This weblog tries to discuss about new technologies regarding software design and applicaton architecture.
@@ -98,4 +98,4 @@ disqus_show_comment_count: false
 google_analytics_tracking_id: UA-61874438-1
 
 # Facebook Like
-facebook_like: false
+facebook_like: true
