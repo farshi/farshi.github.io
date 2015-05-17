@@ -7,7 +7,7 @@ categories: [AWS ECS, DOCKER Container, AMI , IAM , Task Definition, ECS optimiz
 ---
 
 In this post I’m trying to setup an ECS container in a custom cluster with one docker instance inside by using AWS CLI. The  [AWS user guides](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_AWSCLI.html) partially describes how to setup an EC2 Container service using the AWS CLI but in some steps It leaves some tricks to the reader, for example user have to login to AWS console to setup EC2 machine needed to act as an ECS machine or in one of the steps you have to login and create needed IAM role and required policies to assign to the EC2 machine. 
-
+<!--more-->
 In this post I walk through you to setup everything purely by AWS CLI commands from start to finish. It includes:
 
 * Configuring AWS CLI environment on the user machine.

@@ -13,7 +13,7 @@ Hi, My name is Reza Farshi. Thanks for visiting my page.
 
 I'm a software engineer, certified scrum  master and certified Amazon Solution architect. I'm passionate about delivering high quality software using agile techniques.
 
-Mainly focused on software architecture with nearly 15 years experience in enterprise application design and development utilizing Open source, Java, Cloud Computing, and agile methodologies to deliver highly available, scalable, reliable and secure enterprise applications.
+My professional background is mainly on the software architecture.I have  nearly 15 years of experience in enterprise application design and development utilizing Open source, Java, Cloud Computing, and agile methodologies to deliver highly available, scalable, and secure enterprise applications.
 
 My interests outside of work are pretty varied from photography to walking in the countryside, but Paragliding is my special interest. It gives me a natural feel of flying and freedom. I enjoy flying at some weekends when I'd like to make myself away from the hustle and bustle of daily life.
 
