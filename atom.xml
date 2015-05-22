@@ -4,7 +4,7 @@
   <title><![CDATA[FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-05-22T23:35:43+10:00</updated>
+  <updated>2015-05-22T23:46:20+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -20,10 +20,14 @@
     <id>http://www.farshidesigns.com/blog/2015/05/22/dropwizard-and-microservices</id>
     <content type="html"><![CDATA[<p>Today Applications supposed to be highly scalable, highly available and run on cloud environments. Organizations often want to frequently update running applications on production environment, in some cases maybe multiple times a day. Consequently, it’s no longer enough to develop simple, monolithic web applications for doing the job and wee need to design our applications based on microservice architecture.</p>
 
-<p>Micorservice architecture some how follows the Unix philosophy:
-*    Wirte programas that do one thing and do it well.
-*    Write programs that handle text streams, because that is a universal interface.
-*   with pipes many programs could work together, and they work together at a distance.</p>
+<p>Micorservice architecture some how follows the Unix philosophy:</p>
+
+<ul>
+<li> Wirte programas that do one thing and do it well.</li>
+<li> Write programs that handle text streams, because that is a universal interface.</li>
+<li>with pipes many programs could work together, and they work together at a distance.</li>
+</ul>
+
 
 <p>Applications with a microservice architecture consist of a set of narrowly focused, independently deployable services. To find out more about this approach and what is trade-offs you can read the <a href="http://microservices.io/patterns/monolithic.html">Monolithic Architecture pattern</a> paper.</p>
 
