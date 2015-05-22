@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Dropwizard | FARSHI DESIGNS]]></title>
+  <link href="http://www.farshidesigns.com/blog/categories/dropwizard/atom.xml" rel="self"/>
+  <link href="http://www.farshidesigns.com/"/>
+  <updated>2015-05-22T18:20:04+10:00</updated>
+  <id>http://www.farshidesigns.com/</id>
+  <author>
+    <name><![CDATA[Reza Farshi]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Dropwizard and Microservices]]></title>
+    <link href="http://www.farshidesigns.com/blog/2015/05/22/dropwizard-and-microservices/"/>
+    <updated>2015-05-22T18:01:17+10:00</updated>
+    <id>http://www.farshidesigns.com/blog/2015/05/22/dropwizard-and-microservices</id>
+    <content type="html"><![CDATA[<p>Today Applications supposed to be highly scalable, highly available and run on cloud environments. Organizations often want to frequently update running applications on production environment, in some cases maybe multiple times a day. Consequently, it’s no longer enough to develop simple, monolithic web applications for doing the job.</p>
+
+<p>Here we need to design our applications based on microservice architecture. Applications with a microservice architecture consist of a set of narrowly focused, independently deployable services. To find out more about this approach and what is trade-offs you can read the <a href="http://microservices.io/patterns/monolithic.html">Monolithic Architecture pattern</a> paper.</p>
+
+<p>Choosing a suitable framework is an inevitable step If you are aiming to implement an application designed based on  MicroServices architecture. <a href="http://microservices.io/">MicroServices</a> architecture will be more mature when you deploy your application on containers like docker. So you need to use light-weight  frameworks in terms of size on disk and loads on memory. Here <a href="http://www.dropwizard.io/">DropWizard</a> can jump to help.</p>
+
+<p>Apparently Dropwizard managed to strip away libraries from required frameworks and tools which you don&rsquo;t really need. As the Dropwizard  official site defines it as follow:
+<blockquote><p></p></p><p><p>Dropwizard pulls together stable, mature libraries from the Java ecosystem into a simple, light-weight package that lets you focus on getting things done.</p><footer><strong>Dropwizard Site</strong></footer></blockquote></p>
+
+<p>It can be said that DropWizard is half  framework and half  set of libraries which facilitates and ease developing restful applications. It provides best-of-breed Java libraries into one embedded application package. We can say DropWizard is really lightweight because while it is embedding many libraries and tools like <a href="http://www.eclipse.org/jetty/">Jetty</a> for serving http request, <a href="http://jersey.java.net/">Jersey</a>(the reference implementation for <a href="http://jcp.org/en/jsr/detail?id=311">JAX-RS</a>) to write RESTful web services, <a href="http://metrics.codahale.com/">Metrics</a> for auditing health checking of running services, <a href="http://wiki.fasterxml.com/JacksonHome">Jackson</a> for marshalling and de-marshalling objects to JSON as main components and other minor components like <a href="http://code.google.com/p/guava-libraries/">Guava</a>, <a href="http://logback.qos.ch/">Logback</a>, <a href="http://freemarker.sourceforge.net/">Freemarker</a> and so on, the size not exceeded than 50 MB.</p>
+
+<p>So we can conclude that the art of Dropwizard is combining stable version of needed tools and libraries for a Java based application development environment  and makes developers to more focused on coding and get rid them of managing those kind of chores.</p>
+
+<p>After you have your application developed  with the help of Dropwizard, It is recommended by DropWizard that you build your applications as <em>“fat” JAR</em> files. Fat Jars are a single .jar files which contain all of the .class files required to run your application. This allows you to build a single deployable artifact which you can promote from your staging environment to your QA environment to your production environment without worrying about differences in installed libraries.Fat jars are the best candidates to be deployed on  containers like docker.</p>
+
+<p>Using Fat jars will have a smooth continuous delivery and you will be able to push your artifacts through your production pipeline easily without worrying about library mismatches.</p>
+
+<p>Meanwhile In applications which are based on microservice architecture, monitoring health of services and resources is vital. Using Dropwizard you will be able to see different metrics regard with your application, like dump of all the threads running in the process, also  you can run the customised health check codes to monitor the health of your resource. All of these reports will be represented as a JSON object.</p>
+
+<p>Finally you will be able send these reports as a message to be processed and then proper actions can be taken in the case of failure of your services or resources. For example If your application is deployed to Amazon Cloud platform, you can create messages based on generated JSON objects and put them on  AWS SQS and then you will be able do appropriate action using lambda functions to manage resources automatically in the case of failure of the running services.</p>
+]]></content>
+  </entry>
+  
+</feed>
