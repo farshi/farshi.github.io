@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Docker | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/docker/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-05-22T18:20:04+10:00</updated>
+  <updated>2015-05-22T18:21:16+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -31,9 +31,7 @@
 
 <p>So we can conclude that the art of Dropwizard is combining stable version of needed tools and libraries for a Java based application development environment  and makes developers to more focused on coding and get rid them of managing those kind of chores.</p>
 
-<p>After you have your application developed  with the help of Dropwizard, It is recommended by DropWizard that you build your applications as <em>“fat” JAR</em> files. Fat Jars are a single .jar files which contain all of the .class files required to run your application. This allows you to build a single deployable artifact which you can promote from your staging environment to your QA environment to your production environment without worrying about differences in installed libraries.Fat jars are the best candidates to be deployed on  containers like docker.</p>
-
-<p>Using Fat jars will have a smooth continuous delivery and you will be able to push your artifacts through your production pipeline easily without worrying about library mismatches.</p>
+<p>After you have your application developed  with the help of Dropwizard, It is recommended by DropWizard that you build your applications as <em>“fat” JAR</em> files. Fat Jars are a single .jar files which contain all of the .class files required to run your application. This allows you to build a single deployable artifact which you can promote from your staging environment to your QA environment to your production environment without worrying about differences in installed libraries.Fat jars are the best candidates to be deployed on  containers like docker.Using Fat jars you will have a smooth continuous delivery and you will be able to push your artifacts through your production pipeline easily without worrying about library mismatches.</p>
 
 <p>Meanwhile In applications which are based on microservice architecture, monitoring health of services and resources is vital. Using Dropwizard you will be able to see different metrics regard with your application, like dump of all the threads running in the process, also  you can run the customised health check codes to monitor the health of your resource. All of these reports will be represented as a JSON object.</p>
 
