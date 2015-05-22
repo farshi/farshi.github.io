@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dropwizard | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/dropwizard/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-05-22T23:46:20+10:00</updated>
+  <updated>2015-05-22T23:47:41+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -19,6 +19,9 @@
     <updated>2015-05-22T18:01:17+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/05/22/dropwizard-and-microservices</id>
     <content type="html"><![CDATA[<p>Today Applications supposed to be highly scalable, highly available and run on cloud environments. Organizations often want to frequently update running applications on production environment, in some cases maybe multiple times a day. Consequently, it’s no longer enough to develop simple, monolithic web applications for doing the job and wee need to design our applications based on microservice architecture.</p>
+
+<!--more-->
+
 
 <p>Micorservice architecture some how follows the Unix philosophy:</p>
 
