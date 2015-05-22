@@ -2,11 +2,12 @@
 
 <p>Here we need to design our applications based on microservice architecture. Applications with a microservice architecture consist of a set of narrowly focused, independently deployable services. To find out more about this approach and what is trade-offs you can read the <a href="http://microservices.io/patterns/monolithic.html">Monolithic Architecture pattern</a> paper.</p>
 
-<p>Choosing a suitable framework is an inevitable step If you are aiming to implement an application designed based on  MicroServices architecture. <a href="http://microservices.io/">MicroServices</a> architecture will be more mature when you deploy your application on containers like docker. So you need to use light-weight  frameworks in terms of size on disk and loads on memory. If you are Here <a href="http://www.dropwizard.io/">DropWizard</a> can jump to help.</p>
+<p>Choosing a suitable framework is an inevitable step If you are aiming to implement an application designed based on  MicroServices architecture. <a href="http://microservices.io/">MicroServices</a> architecture will be more mature when you deploy your application on containers like docker. So you need to use light-weight  frameworks in terms of size on disk and loads on memory. Here <a href="http://www.dropwizard.io/">DropWizard</a> can jump to help.</p>
 
 <p>Apparently Dropwizard managed to strip away libraries from required frameworks and tools which you don&rsquo;t really need. As the Dropwizard  official site defines it as follow:</p>
 
-<p>Dropwizard pulls together stable, mature libraries from the Java ecosystem into a simple, light-weight package that lets you focus on getting things done.</p>
+<blockquote><p>Dropwizard pulls together stable, mature libraries from the Java ecosystem into a simple, light-weight package that lets you focus on getting things done.</p><footer><strong>Dropwizard Site</strong></footer></blockquote>
+
 
 <p>It can be said that DropWizard is half  framework and half  set of libraries which facilitates and ease developing restful applications. It provides best-of-breed Java libraries into one embedded application package. We can say DropWizard is really lightweight because while it is embedding many libraries and tools like <a href="http://www.eclipse.org/jetty/">Jetty</a> for serving http request, <a href="http://jersey.java.net/">Jersey</a>(the reference implementation for <a href="http://jcp.org/en/jsr/detail?id=311">JAX-RS</a>) to write RESTful web services, <a href="http://metrics.codahale.com/">Metrics</a> for auditing health checking of running services, <a href="http://wiki.fasterxml.com/JacksonHome">Jackson</a> for marshalling and de-marshalling objects to JSON as main components and other minor components like <a href="http://code.google.com/p/guava-libraries/">Guava</a>, <a href="http://logback.qos.ch/">Logback</a>, <a href="http://freemarker.sourceforge.net/">Freemarker</a> and so on, the size not exceeded than 50 MB.</p>
 
