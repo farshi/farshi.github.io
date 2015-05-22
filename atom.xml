@@ -4,7 +4,7 @@
   <title><![CDATA[FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-05-22T19:09:56+10:00</updated>
+  <updated>2015-05-22T23:29:59+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -18,9 +18,18 @@
     <link href="http://www.farshidesigns.com/blog/2015/05/22/dropwizard-and-microservices/"/>
     <updated>2015-05-22T18:01:17+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/05/22/dropwizard-and-microservices</id>
-    <content type="html"><![CDATA[<p>Today Applications supposed to be highly scalable, highly available and run on cloud environments. Organizations often want to frequently update running applications on production environment, in some cases maybe multiple times a day. Consequently, it’s no longer enough to develop simple, monolithic web applications for doing the job.</p>
+    <content type="html"><![CDATA[<p>Today Applications supposed to be highly scalable, highly available and run on cloud environments. Organizations often want to frequently update running applications on production environment, in some cases maybe multiple times a day. Consequently, it’s no longer enough to develop simple, monolithic web applications for doing the job and wee need to design our applications based on microservice architecture.</p>
 
-<p>Here we need to design our applications based on microservice architecture. Applications with a microservice architecture consist of a set of narrowly focused, independently deployable services. To find out more about this approach and what is trade-offs you can read the <a href="http://microservices.io/patterns/monolithic.html">Monolithic Architecture pattern</a> paper.</p>
+<p>Micorservice architecture some how follows the Unix philosophy:</p>
+
+<ul>
+<li> Wirte programas that do one thing and do it well.</li>
+<li> Write programs that handle text streams, because that is a universal interface.</li>
+<li>with pipes many programs could work together, and they work together at a distance.</li>
+</ul>
+
+
+<p>Applications with a microservice architecture consist of a set of narrowly focused, independently deployable services. To find out more about this approach and what is trade-offs you can read the <a href="http://microservices.io/patterns/monolithic.html">Monolithic Architecture pattern</a> paper.</p>
 
 <p>Choosing a suitable framework is an inevitable step If you are aiming to implement an application designed based on  MicroServices architecture. <a href="http://microservices.io/">MicroServices</a> architecture will be more mature when you deploy your application on containers like docker. So you need to use light-weight  frameworks in terms of size on disk and loads on memory. Here <a href="http://www.dropwizard.io/">DropWizard</a> can jump to help.</p>
 
@@ -33,7 +42,7 @@
 
 <p>So we can conclude that the art of Dropwizard is combining stable version of needed tools and libraries for a Java based application development environment  and makes developers to more focused on coding and get rid them of managing those kind of chores.</p>
 
-<p>After you have your application developed  with the help of Dropwizard, It is recommended by DropWizard that you build your applications as <em>“fat” JAR</em> files. Fat Jars are a single <em>.jar</em> files which contain all of the .class files required to run your application. This allows you to build a single deployable artifact which you can promote from your staging environment to your QA environment to your production environment without worrying about differences in installed libraries. Using Fat jars you will have a smooth continuous delivery and you will be able to push your artifacts through your production pipeline easily without worrying about library mismatches and they are the best candidates to be deployed on containers like docker</p>
+<p>After you have your application developed  with the help of Dropwizard, It is recommended by DropWizard that you build your applications as <em>“fat” JAR</em> files. Fat Jars are a single <em>.jar</em> files which contain all of the .class files required to run your application. This allows you to build a single deployable artifact which you can promote from your staging environment to your QA environment to your production environment without worrying about differences in installed libraries. Using Fat jars you will have a smooth continuous delivery and you will be able to push your artifacts through your production pipeline easily without worrying about library mismatches and they are the best candidates to be deployed on containers like docker.</p>
 
 <p>Meanwhile In applications which are based on microservice architecture, monitoring health of services and resources is vital. Using Dropwizard you will be able to see different metrics regard with your application, like dump of all the threads running in the process, also  you can run the customized health check codes to monitor the health of your resource. All of these reports will be represented as a JSON object.</p>
 
