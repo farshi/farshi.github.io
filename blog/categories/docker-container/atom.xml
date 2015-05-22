@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Docker Container | FARSHI DESIGNS]]></title>
   <link href="http://www.farshidesigns.com/blog/categories/docker-container/atom.xml" rel="self"/>
   <link href="http://www.farshidesigns.com/"/>
-  <updated>2015-05-22T19:06:31+10:00</updated>
+  <updated>2015-05-22T19:09:56+10:00</updated>
   <id>http://www.farshidesigns.com/</id>
   <author>
     <name><![CDATA[Reza Farshi]]></name>
@@ -19,12 +19,12 @@
     <updated>2015-05-14T23:03:10+10:00</updated>
     <id>http://www.farshidesigns.com/blog/2015/05/14/setup-a-aws-ecs-container-purely-using-cli</id>
     <content type="html"><![CDATA[<p>In this post I’m trying to setup an ECS container in a custom cluster with one docker instance inside by using AWS CLI. The  <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_AWSCLI.html">AWS user guides</a> describes how to setup an EC2 Container service using the AWS CLI but in some steps It leaves some tricks to the reader, for example you have to login to AWS console to setup EC2 machine, or you have to create needed IAM role and required policies via AWS console.
-In this post I will walk through you the guide to setup everything purely by AWS CLI commands</p>
+In this post I will walk through you the guide to setup everything purely by AWS CLI commands from start to finish.</p>
 
 <!--more-->
 
 
-<p>from start to finish. It includes:</p>
+<p>The guides includes these sections:</p>
 
 <ul>
 <li>Configuring AWS CLI environment on the user machine.</li>
