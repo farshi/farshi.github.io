@@ -67,10 +67,10 @@
     <loc>http://www.farshidesigns.com/</loc>
   </url>
   <url>
-    <loc>http://www.farshidesigns.com/about/</loc>
+    <loc>http://www.farshidesigns.com/paragliding/</loc>
   </url>
   <url>
-    <loc>http://www.farshidesigns.com/paragliding/</loc>
+    <loc>http://www.farshidesigns.com/about/</loc>
   </url>
   <url>
     <loc>http://www.farshidesigns.com/blog/categories/my-first-post/</loc>
@@ -167,5 +167,9 @@
   </url>
   <url>
     <loc>http://www.farshidesigns.com/blog/categories/docker/</loc>
+  </url>
+  <url>
+    <loc>http://www.farshidesigns.com/verifyforzoho.html</loc>
+    <lastmod>2015-06-07T03:24:13+10:00</lastmod>
   </url>
 </urlset>
